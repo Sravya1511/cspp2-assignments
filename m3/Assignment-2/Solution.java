@@ -28,17 +28,19 @@ final class Solution {
 
     static int numberOf(final int n) {
         int count = 0;
+        final int ten = 10;
+        final int seven = 7;
         for (int i = 1; i <= n; i++) {
             // System.out.println(i);
             int j = i;
             while (j != 0) {
                 int x;
-                x = j % 10;
-                if (x == 7) {
+                x = j % ten;
+                if (x == seven) {
                     count = count + 1;
                     // System.out.println(count);
                 }
-                j = j / 10;
+                j = j / ten;
             }
         }
         return count;
