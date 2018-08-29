@@ -4,6 +4,13 @@ import java.util.Scanner;
     *Do not modify this main function.
     */
 final class Solution {
+   /**
+    *Do not modify this main function.
+    */
+    private Solution() { }
+    /**
+    * @param args comment
+    */
 /* Fill the main function to print the number of 7's between 1 to n*/
     public static void main(final String[] args) {
 
@@ -11,6 +18,13 @@ final class Solution {
         int n = s.nextInt();
         System.out.println(numberOf(n));
     }
+    /**
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     static int numberOf(final int n) {
         int count = 0;
