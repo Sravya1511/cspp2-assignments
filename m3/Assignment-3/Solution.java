@@ -1,3 +1,4 @@
+/*This is a program.*/
 import java.util.Scanner;
 /**
     Do not modify this main function.
