@@ -22,16 +22,17 @@ public class Solution {
 		for (int i = 0; i<arr2.length; i++) {
 			for (int j = 0; j<arr2[i].length; j++){
 				arr2[i][j] = input.nextInt();
-				if ((r1!=r2) || (c1!=c2)) {
-					System.out.println("not possible");
-					break;
-				}
+
 			}
 		}
 
 		
 		int arr3[][];
 		arr3 = new int[r1][c1];
+		if ((r1!=r2) || (c1!=c2)) {
+					System.out.println("not possible");
+				}
+		else {
 		for (int i = 0; i<arr1.length; i++) {
 			for (int j = 0; j<arr1[i].length; j++){
 				arr3[i][j] = arr1[i][j] + arr2[i][j];
@@ -44,6 +45,8 @@ public class Solution {
 			}
             System.out.println();
 		}
+		}
+		
 			
 
 
