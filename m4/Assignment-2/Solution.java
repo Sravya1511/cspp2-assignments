@@ -1,13 +1,13 @@
 /**This is a program.**/
 import java.util.*;
-public class Solution {
+final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
     /**
      * { function_description }
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         
         // System.out.println("Enter size of array 1");
         Scanner input = new Scanner(System.in);
