@@ -25,7 +25,7 @@ public class Solution
         char ch = s.charAt(i);
         // System.out.println("Character at "+i+" Position: "+ch);
         int x = Character.getNumericValue(ch);
-        System.out.println(x);
+        // System.out.println(x);
         sum = sum+(x*Math.pow(2,count));
         count++;
       } 
