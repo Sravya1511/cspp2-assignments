@@ -39,8 +39,7 @@ final class Solution {
         arr3 = new int[r1][c1];
         if ((r1 != r2) || (c1 != c2)) {
             System.out.println("not possible");
-        }
-        else {
+        } else {
         for (int i = 0; i < arr1.length; i++) {
             for (int j = 0; j < arr1[i].length; j++) {
                 arr3[i][j] = arr1[i][j] + arr2[i][j];
@@ -61,6 +60,5 @@ final class Solution {
 
         //  arr[i] = input.nextInt();
         // }
-        
     }
 }
