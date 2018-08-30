@@ -8,15 +8,15 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        
+
         // System.out.println("Enter size of array 1");
         Scanner input = new Scanner(System.in);
         int r1 = input.nextInt();
         int c1 = input.nextInt();
-        int arr1[][];
+        int[][] arr1;
         arr1 = new int[r1][c1];
-        for (int i = 0; i<arr1.length; i++)
-            for (int j = 0; j<arr1[i].length; j++)
+        for (int i = 0; i < arr1.length; i++)
+            for (int j = 0; j < arr1[i].length; j++)
                 arr1[i][j] = input.nextInt();
         // System.out.println(Arrays.toString(arr1));
         // System.out.println("Enter size of array 2");
