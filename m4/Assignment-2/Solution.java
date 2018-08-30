@@ -19,8 +19,8 @@ public class Solution {
 
 		int arr2[][];
 		arr2 = new int[r2][c2];
-		for (int i = 0; i<arr2.length; i++) {
-			for (int j = 0; j<arr2[i].length; j++){
+		for (int i = 0; i < arr2.length; i++) {
+			for (int j = 0; j < arr2[i].length; j++){
 				arr2[i][j] = input.nextInt();
 
 			}
@@ -29,15 +29,15 @@ public class Solution {
 		
 		int arr3[][];
 		arr3 = new int[r1][c1];
-		if ((r1!=r2) || (c1!=c2)) {
+		if ((r1 != r2) || (c1 != c2)) {
 					System.out.println("not possible");
 				}
 		else {
-		for (int i = 0; i<arr1.length; i++) {
-			for (int j = 0; j<arr1[i].length; j++){
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr1[i].length; j++){
 				arr3[i][j] = arr1[i][j] + arr2[i][j];
-				if (j!=arr1[i].length-1) {
-					System.out.print(arr3[i][j]+" ");
+				if (j != arr1[i].length - 1) {
+					System.out.print(arr3[i][j] + " ");
 				}
 				else {
 					System.out.print(arr3[i][j]);
@@ -47,9 +47,6 @@ public class Solution {
 		}
 		}
 		
-			
-
-
 
         
 		
