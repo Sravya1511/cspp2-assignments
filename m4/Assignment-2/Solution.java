@@ -16,14 +16,18 @@ public class Solution {
 		// System.out.println("Enter size of array 2");
 		int r2 = input.nextInt();
 		int c2 = input.nextInt();
-		if ((r1!=r2) || (c1!=c2)) {
-			System.out.println("not possible");
-		}
+
 		int arr2[][];
 		arr2 = new int[r2][c2];
-		for (int i = 0; i<arr2.length; i++)
-			for (int j = 0; j<arr2[i].length; j++)
+		for (int i = 0; i<arr2.length; i++) {
+			for (int j = 0; j<arr2[i].length; j++){
 				arr2[i][j] = input.nextInt();
+				if ((r1!=r2) || (c1!=c2)) {
+					System.out.println("not possible");
+					break;
+				}
+			}
+		}
 
 		
 		int arr3[][];
