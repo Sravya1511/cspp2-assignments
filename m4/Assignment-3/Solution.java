@@ -15,6 +15,7 @@ public class Solution
 			String s=sc.nextLine();
 			binaryToDecimal(s);//Write binaryToDecimal function
 			// System.out.println(res);
+			System.out.println();
 		}
 	}
 	static void binaryToDecimal(String s) {
