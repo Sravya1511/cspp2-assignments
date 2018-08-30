@@ -31,7 +31,12 @@ public class Solution {
 		for (int i = 0; i<arr1.length; i++) {
 			for (int j = 0; j<arr1[i].length; j++){
 				arr3[i][j] = arr1[i][j] + arr2[i][j];
-				System.out.print(arr3[i][j]+" ");
+				if (j!=arr1[i].length-1) {
+					System.out.print(arr3[i][j]+" ");
+				}
+				else {
+					System.out.print(arr3[i][j]);
+				}
 			}
             System.out.println();
 		}
