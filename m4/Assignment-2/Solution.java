@@ -3,7 +3,7 @@ public class Solution {
 	/* Fill the main function to print resultant of addition of matrices*/
 	public static void main(String[] args) {
 		
-		System.out.println("Enter size of array 1");
+		// System.out.println("Enter size of array 1");
 		Scanner input = new Scanner(System.in);
 		int r1 = input.nextInt();
 		int c1 = input.nextInt();
@@ -13,7 +13,7 @@ public class Solution {
 			for (int j = 0; j<arr1[i].length; j++)
 				arr1[i][j] = input.nextInt();
 		// System.out.println(Arrays.toString(arr1));
-		System.out.println("Enter size of array 2");
+		// System.out.println("Enter size of array 2");
 		int r2 = input.nextInt();
 		int c2 = input.nextInt();
 		int arr2[][];
