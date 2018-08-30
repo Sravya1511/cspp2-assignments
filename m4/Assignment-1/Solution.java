@@ -10,7 +10,7 @@ public class Solution
 		int arr[];
 		arr = new int[n];
 		int temp = 0;
-		for (int i=0; i<arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			arr[i] = sc.nextInt();
 			if (temp < arr[i]) {
 				temp = arr[i];
