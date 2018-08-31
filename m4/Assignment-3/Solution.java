@@ -18,6 +18,7 @@ final class Solution {
         for (int i = 0; i <= n; i++) {
             String s = sc.nextLine();
             String res = binaryToDecimal(s);
+            System.out.println(res);
         }
     }
     /**
