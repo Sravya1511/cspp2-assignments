@@ -1,5 +1,8 @@
 /**This is a program.*/
 import java.util.*;
+/**
+ * { item_description }.
+ */
 final class Solution {
      /**
     *Do not modify this main function.
@@ -9,8 +12,7 @@ final class Solution {
     * @param args comment.
     */
 
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
