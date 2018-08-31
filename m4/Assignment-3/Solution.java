@@ -13,12 +13,11 @@ public class Solution
 		int n = sc.nextInt();
 		for(int i = 0; i <= n; i++){
 			String s = sc.nextLine();
-			binaryToDecimal(s);//Write binaryToDecimal function
-			// System.out.println(res);
-			// System.out.println(res);
+			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			System.out.println(res);
 		}
 	}
-	static void binaryToDecimal(String s) {
+	static String binaryToDecimal(String s) {
 		
 	  double sum =  0;
       int count = 0;
@@ -30,6 +29,7 @@ public class Solution
         sum = sum + (x * Math.pow(2,count));
         count++;
       } 
-      System.out.format("%.0f", sum);
+      String res = Double.toString(sum);
+      return res;
 	}
 }
