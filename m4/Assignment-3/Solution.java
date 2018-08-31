@@ -31,6 +31,7 @@ public class Solution
         count++;
       } 
       res = res+sum;
-      return res;
+      String[] temp = res.split(",");
+      return temp[0];
 	}
 }
