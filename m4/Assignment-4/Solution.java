@@ -1,5 +1,5 @@
 /**This is a program.*/
-import java.util.*;
+import java.util.Scanner;
 /**
  * { item_description }.
  */
