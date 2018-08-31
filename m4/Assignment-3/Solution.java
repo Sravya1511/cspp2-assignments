@@ -21,7 +21,6 @@ public class Solution
 		
 	  double sum =  0;
       int count = 0;
-      String res = "";
       for(int i = s.length() - 1; i >= 0 ;i--) {
         char ch = s.charAt(i);
         // System.out.println("Character at "+i+" Position: "+ch);
@@ -30,7 +29,6 @@ public class Solution
         sum = sum + (x * Math.pow(2,count));
         count++;
       } 
-      res = res+sum;
       return String.format("%.0f", sum);
 	}
 }
