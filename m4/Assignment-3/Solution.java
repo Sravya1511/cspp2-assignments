@@ -31,7 +31,6 @@ public class Solution
         count++;
       } 
       res = res+sum;
-      String[] temp = res.split(".");
-      return temp[0];
+      return String.format("%.0f", sum);
 	}
 }
