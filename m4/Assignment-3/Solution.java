@@ -33,6 +33,3 @@ public class Solution
       System.out.format("%.0f", sum);
 	}
 }
-
-
-
