@@ -29,45 +29,15 @@ final class Solution {
         res = new int[rows][columns];
         for(int i = 0; i<a.length; i++) {
             for (int j = 0; j<a[i].length; j++) {
-                if ((a[i][j]>0) && (a[i][j]<50)) {
-                    res[i][j] = 0;
+                for (int k = 0; k<10; k++) {
+                    int x = a[i][j]-(100*k);
+                    if (x<50) {
+                        res[i][j] = 100*k;
+                    }
                 }
-                else if ((a[i][j]>=50) && (a[i][j]<=100)) {
-                    res[i][j] = 100;
-                }
-                else if ((a[i][j]>100) && (a[i][j]<150)) {
-                    res[i][j] = 100;
-                }
-                else if ((a[i][j]>=150) && (a[i][j]<=200)) {
-                    res[i][j] = 200;
-                }
-                else if ((a[i][j]>200) && (a[i][j]<250)) {
-                    res[i][j] = 200;
-                }
-                else if ((a[i][j]>=250) && (a[i][j]<=300)) {
-                    res[i][j] = 300;
-                }
-                else if ((a[i][j]>300) && (a[i][j]<350)) {
-                    res[i][j] = 300;
-                }
-                else if ((a[i][j]>=350) && (a[i][j]<=400)) {
-                    res[i][j] = 400;
-                }
-                else if ((a[i][j]>400) && (a[i][j]<450)) {
-                    res[i][j] = 400;
-                }
-                else if ((a[i][j]>=450) && (a[i][j]<=500)) {
-                    res[i][j] = 500;
-                }
-                else if ((a[i][j]>500) && (a[i][j]<550)) {
-                    res[i][j] = 500;
-                }
-                else if ((a[i][j]>=550) && (a[i][j]<=600)) {
-                    res[i][j] = 600;
-                }
-
             }
         }
+
         return res;
 	
     }
