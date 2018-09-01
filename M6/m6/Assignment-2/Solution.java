@@ -22,14 +22,14 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, 
+    static int[][] roundHundred(final int[][] a,
         final int rows, final int columns) {
 
     // write your code here
         int[][] res;
-        int fifty = 50;
-        int ten = 10;
-        int hun = 100;
+        final int fifty = 50;
+        final int ten = 10;
+        final int hun = 100;
         res = new int[rows][columns];
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
