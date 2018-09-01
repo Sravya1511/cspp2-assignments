@@ -35,7 +35,7 @@ final class Solution {
     }
     /**
      * Main function.
-     * 
+     *
      *
      * @param      args  The arguments
      */
