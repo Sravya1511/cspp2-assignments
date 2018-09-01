@@ -26,21 +26,22 @@ final class Solution {
 
 	// write your code here
         int[][] res;
+        int fifty = 50;
         res = new int[rows][columns];
-        for(int i = 0; i<a.length; i++) {
-            for (int j = 0; j<a[i].length; j++) {
-                for (int k = 0; k<10; k++) {
-                    int x = a[i][j]-(100*k);
-                    if (x<50) {
-                        res[i][j] = 100*k;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                for (int k = 0; k < 10; k++) {
+                    int x = a[i][j] - (100 * k);
+                    if (x<fifty) {
+                        res[i][j] = 100 * k;
                         break;
                     }
                 }
             }
         }
 
-        return res;
-	
+    return res;
+
     }
     /**
      * Main function.
