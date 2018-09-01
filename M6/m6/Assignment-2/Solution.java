@@ -33,6 +33,7 @@ final class Solution {
                     int x = a[i][j]-(100*k);
                     if (x<50) {
                         res[i][j] = 100*k;
+                        break;
                     }
                 }
             }
