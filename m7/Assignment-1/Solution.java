@@ -2,12 +2,8 @@
 import java.util.Scanner;
 /*This is a program.*/
 final class InputValidator {
-    /*Write the atrributes and methods for InputValidator*/
     /**
-     * { var_description }.
-     */
-    /**
-     * @param
+     * @param input comment
      */
     private int len;
     /**
