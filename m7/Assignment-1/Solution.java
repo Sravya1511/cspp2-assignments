@@ -1,6 +1,6 @@
-import java.util.*;
-final class InputValidator
-{
+/*This is a program.*/
+import java.util.Scanner;
+final class InputValidator {
 	/*Write the atrributes and methods for InputValidator*/
 	/**
 	 * { var_description }
@@ -9,26 +9,32 @@ final class InputValidator
 
 
 
-	InputValidator(String input) {
+	InputValidator(final String input) {
 		this.input = input;
 	}
-
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 	boolean validateData() {
 		int l = input.length();
         if (l >= 6) {
-        	return true;
-        } else { 
-        	return false; 
-        }
+        	return true; }
+    
+        return false; 
+        
 	}
 }
-final class Solution
-{
+/*Program.*/
+final class Solution {
 	/**
 	 * '{ item_description }.
 	 */
-	public static void main(final String args[])
-    {
+	private Solution() {
+		
+	}
+	public static void main(final String args[]) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
     	InputValidator i = new InputValidator(input);    	
