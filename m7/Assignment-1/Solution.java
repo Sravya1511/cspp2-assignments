@@ -4,12 +4,12 @@ final class InputValidator {
     /**
      * @param input comment
      */
-    private int len;
+    private int l;
     /**
      * @param input The input
      */
     InputValidator(final String input) {
-        len = input.length();
+        l = input.length();
     }
     /**
      * { function_description }.
@@ -18,10 +18,9 @@ final class InputValidator {
      */
     boolean validateData() {
         final int six = 6;
-        if (len >= six) {
+        if (l >= six) {
             return true;
         }
-
         return false;
     }
 }
@@ -47,3 +46,4 @@ final class Solution {
         System.out.println(i.validateData());
     }
 }
+
