@@ -6,14 +6,12 @@ final class InputValidator {
     /**
      * { var_description }.
      */
-    private String input;
+    private int len;
     /**
-     * Constructs the object.
-     *
      * @param input The input
      */
     InputValidator(final String input) {
-        this.input = input;
+        len = input.length();
     }
     /**
      * { function_description }.
@@ -21,9 +19,8 @@ final class InputValidator {
      * @return     { description_of_the_return_value }.
      */
     boolean validateData() {
-        int l = input.length();
         final int six = 6;
-        if (l >= six) {
+        if (len >= six) {
             return true;
         }
 
