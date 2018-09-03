@@ -1,7 +1,10 @@
 import java.util.*;
-class InputValidator
+final class InputValidator
 {
 	/*Write the atrributes and methods for InputValidator*/
+	/**
+	 * { var_description }
+	 */
 	String input;
 
 
@@ -12,20 +15,23 @@ class InputValidator
 
 	boolean validateData() {
 		int l = input.length();
-        if(l >=6 ) {
+        if (l >= 6) {
         	return true;
-        } else { return false; }
+        } else { 
+        	return false; 
+        }
 	}
 }
-public class Solution
+final class Solution
 {
-	public static void main(String args[])
+	/**
+	 * '{ item_description }.
+	 */
+	public static void main(final String args[])
     {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
     	InputValidator i = new InputValidator(input);    	
     	System.out.println(i.validateData());
-
     }
-
 }
