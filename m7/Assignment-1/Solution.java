@@ -4,19 +4,23 @@ import java.util.Scanner;
 final class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     /**
-     * { var_description }
+     * { var_description }.
      */
     String input;
 
 
-
+    /**
+     * Constructs the object.
+     *
+     * @param      input  The input
+     */
     InputValidator(final String input) {
         this.input = input;
     }
     /**
      * { function_description }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     boolean validateData() {
         int l = input.length();
@@ -26,7 +30,6 @@ final class InputValidator {
         }
 
         return false;
-
     }
 }
 /*Program.*/
