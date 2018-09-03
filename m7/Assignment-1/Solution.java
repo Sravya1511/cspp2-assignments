@@ -26,7 +26,7 @@ final class InputValidator {
         int l = input.length();
         final int six = 6;
         if (l >= six) {
-            return true; 
+            return true;
         }
 
         return false;
@@ -44,7 +44,10 @@ final class Solution {
     /**
      * { item_description }.
      */
-    public static void main(final String args[]) {
+    public static void main (final String args[]) {
+        /**
+         * { var_description }.
+         */
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
