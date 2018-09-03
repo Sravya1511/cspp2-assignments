@@ -6,7 +6,7 @@ final class InputValidator {
     /**
      * { var_description }.
      */
-    String input;
+    private String input;
 
 
     /**
@@ -42,9 +42,10 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * { item_description }.
+     * { item_description }
+     * @param args
      */
-    public static void main (final String args[]) {
+    public static void main(final String args[]) {
         /**
          * { var_description }.
          */
