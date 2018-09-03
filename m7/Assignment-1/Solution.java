@@ -6,6 +6,9 @@ final class InputValidator {
     /**
      * { var_description }.
      */
+    /**
+     * @param
+     */
     private int len;
     /**
      * @param input The input
