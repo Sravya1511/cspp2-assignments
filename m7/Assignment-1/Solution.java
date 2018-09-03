@@ -40,8 +40,7 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * { item_description }
-     * @param args
+     * @param args vaLue
      */
     public static void main(final String[] args) {
         /**
