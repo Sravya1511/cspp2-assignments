@@ -7,8 +7,6 @@ final class InputValidator {
      * { var_description }.
      */
     private String input;
-
-
     /**
      * Constructs the object.
      *
