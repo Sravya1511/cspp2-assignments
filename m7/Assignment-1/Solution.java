@@ -12,7 +12,7 @@ class InputValidator
 
 	boolean validateData() {
 		int l = input.length();
-        if(l>6) {
+        if(l>=6) {
         	return true;
         } else { return false; }
 
