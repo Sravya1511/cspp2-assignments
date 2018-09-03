@@ -1,6 +1,5 @@
-
 import java.util.Scanner;
-/*This is a program.*/
+/**This is a program.**/
 final class InputValidator {
     /**
      * @param input comment
