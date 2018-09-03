@@ -1,5 +1,6 @@
-/*This is a program.*/
+
 import java.util.Scanner;
+/*This is a program.*/
 final class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     /**
@@ -19,7 +20,8 @@ final class InputValidator {
      */
     boolean validateData() {
         int l = input.length();
-        if (l >= 6) {
+        final int six = 6;
+        if (l >= six) {
             return true; 
         }
 
