@@ -45,7 +45,7 @@ final class Solution {
      * { item_description }
      * @param args
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         /**
          * { var_description }.
          */
