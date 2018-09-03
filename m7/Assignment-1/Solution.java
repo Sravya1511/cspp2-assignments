@@ -10,7 +10,7 @@ final class InputValidator {
     /**
      * Constructs the object.
      *
-     * @param      input  The input
+     * @param input  The input
      */
     InputValidator(final String input) {
         this.input = input;
