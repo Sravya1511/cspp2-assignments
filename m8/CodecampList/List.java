@@ -4,7 +4,7 @@ import java.util.*;
 /**This is a program.**/
 final class List {
 
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -30,7 +30,7 @@ final class List {
     /**
      * '{ var_description }.
      */
-    private int [] list_num1;
+    private int[] list_num1;
     private int size1;
     /**
      * { item_description }.
@@ -57,7 +57,7 @@ final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -89,7 +89,7 @@ final class List {
     /**
      * { item_description }.
      */
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -98,25 +98,25 @@ final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list_num1[size1] = item;
         size1 = size1 + 1;
   //       for(int i = 0; i<list_num1.length; i++){
-		// 	if (list_num1[i] == 0) {
-		// 		list_num1[i] = item;
-		// 		break;
-		// 	}
-		// }
-		// System.out.println(Arrays.toString(list_num1));
+        //  if (list_num1[i] == 0) {
+        //      list_num1[i] = item;
+        //      break;
+        //  }
+        // }
+        // System.out.println(Arrays.toString(list_num1));
     }
 
     /*
@@ -127,7 +127,7 @@ final class List {
      * The method returns an int. Empty list should return 0.
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -140,7 +140,7 @@ final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -157,21 +157,21 @@ final class List {
      * The method returns void (nothing)
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        
+
         if (index >= list_num1.length) {
-        	System.out.println("Invalid Position Exception");
+            System.out.println("Invalid Position Exception");
         }
         else {
         size1 = size1 - 1;
         for (int i = index; i < list_num1.length - 1; i++) {
-        	list_num1[i] = list_num1[i + 1];
+            list_num1[i] = list_num1[i + 1];
         }
         // System.out.println(Arrays.toString(list_num1));
         }
@@ -185,20 +185,20 @@ final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      */
-    public void get(int index) {
+    public void get(final int index) {
         // Replace the code below to write the code for get
         if ((index >= 0) && (index < size1)) {
-        	System.out.println(list_num1[index]);
+            System.out.println(list_num1[index]);
         }
-        
+
     }
 
     /*
@@ -210,7 +210,7 @@ final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -229,17 +229,16 @@ final class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for (int i = 0; i < size1; i++){
-        	if (i == size1 - 1) {
+        for (int i = 0; i < size1; i++) {
+            if (i == size1 - 1) {
               str = str + list_num1[i];
-        	}
-        	else {
-        	  str = str + list_num1[i] + ",";
-        	}
+            } else {
+              str = str + list_num1[i] + ",";
+            }
         }
         str += "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -247,24 +246,24 @@ final class List {
      * the item exists and otherwise false
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < list_num1.length; i++) {
-            if (list_num1[i] == item){
+            if (list_num1[i] == item) {
             return true;
-        	}      
+            }
         }
         return false;
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -275,22 +274,22 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < list_num1.length; i++) {
-        	if (list_num1[i] == item){
+            if (list_num1[i] == item) {
             return i;
-        	}      
+            }
         }
         return -1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
 
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -333,5 +332,5 @@ final class List {
                 break;
             }
         }
-	}
+    }
 }
