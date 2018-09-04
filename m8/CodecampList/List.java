@@ -166,12 +166,12 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public void get(int index) {
         // Replace the code below to write the code for get
         if ((index >= 0) && (index < size1)) {
-        	return list_num1[index];
+        	System.out.println(list_num1[index]);
         }
-        return -1;
+        
     }
 
     /*
@@ -202,14 +202,12 @@ public class List {
               str = str + list_num1[i];
         	}
         	else {
-        	  str = str + list_num1[i] + ",";	
+        	  str = str + list_num1[i] + ",";
         	}
-        	
         }
         str += "]";
         return str;
     } 
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -219,7 +217,7 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < list_num1.length; i++) {
-        	if (list_num1[i] == item){
+            if (list_num1[i] == item){
             return true;
         	}      
         }
@@ -277,7 +275,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                l.get(Integer.parseInt(tokens[1]));
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
