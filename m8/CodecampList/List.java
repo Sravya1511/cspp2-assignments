@@ -79,6 +79,8 @@ public class List {
         // list_num1 = list_num;
         // list_num1 = new int[10];
         // size1 = size;
+        list_num1 = new int[10];
+        size1 = 0;
         
 
 
