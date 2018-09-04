@@ -106,7 +106,7 @@ public class List {
 				break;
 			}
 		}
-		System.out.println(Arrays.toString(list_num1));
+		// System.out.println(Arrays.toString(list_num1));
     }
 
     /*
