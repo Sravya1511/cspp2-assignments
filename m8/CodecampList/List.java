@@ -333,6 +333,8 @@ final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
+                break;
             }
         }
     }
