@@ -119,13 +119,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        int count = 0;
-		for(int i : list_num1) {
-			if(i!=0) {
-				count++;
-			}
-		}
-		return count;
+        return size1;
     }
 
     /*
@@ -179,9 +173,7 @@ public class List {
         if ((index >= 0) && (index <size1)) {
         	return list_num1[index];
         }
-        else {
-        	return -1;
-        }
+        return -1;
     }
 
     /*
