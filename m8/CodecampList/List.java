@@ -159,7 +159,7 @@ public class List {
         for (int i = index; i<list_num1.length-1; i++) {
         	list_num1[i] = list_num1[i+1];
         }
-        System.out.println(Arrays.toString(list_num1));
+        // System.out.println(Arrays.toString(list_num1));
         }
     }
 
