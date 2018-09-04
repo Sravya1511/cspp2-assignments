@@ -31,6 +31,9 @@ final class List {
      * '{ var_description }.
      */
     private int[] list;
+    /**
+     * { var_description }.
+     */
     private int size1;
     /**
      * { item_description }.
