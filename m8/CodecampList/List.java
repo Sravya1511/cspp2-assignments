@@ -30,7 +30,7 @@ final class List {
     /**
      * '{ var_description }.
      */
-    private int[] list_num;
+    private int[] list;
     private int size1;
     /**
      * { item_description }.
@@ -68,7 +68,7 @@ final class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -80,11 +80,11 @@ final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        // list_num = list_num;
-        // list_num = new int[10];
+        // list = list;
+        // list = new int[10];
         // size1 = size;
         final int ten = 10;
-        list_num = new int[ten];
+        list = new int[ten];
         size1 = 0;
     }
     /**
@@ -109,15 +109,15 @@ final class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        list_num[size1] = item;
+        list[size1] = item;
         size1 = size1 + 1;
-  //       for(int i = 0; i<list_num.length; i++){
-        //  if (list_num[i] == 0) {
-        //      list_num[i] = item;
+  //       for(int i = 0; i<list.length; i++){
+        //  if (list[i] == 0) {
+        //      list[i] = item;
         //      break;
         //  }
         // }
-        // System.out.println(Arrays.toString(list_num));
+        // System.out.println(Arrays.toString(list));
     }
 
     /*
@@ -166,14 +166,14 @@ final class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
 
-        if (index >= list_num.length) {
+        if (index >= list.length) {
             System.out.println("Invalid Position Exception");
         } else {
         size1 = size1 - 1;
-        for (int i = index; i < list_num.length - 1; i++) {
-            list_num[i] = list_num[i + 1];
+        for (int i = index; i < list.length - 1; i++) {
+            list[i] = list[i + 1];
         }
-        // System.out.println(Arrays.toString(list_num));
+        // System.out.println(Arrays.toString(list));
         }
     }
 
@@ -196,7 +196,7 @@ final class List {
     public void get(final int index) {
         // Replace the code below to write the code for get
         if ((index >= 0) && (index < size1)) {
-            System.out.println(list_num[index]);
+            System.out.println(list[index]);
         }
 
     }
@@ -231,9 +231,9 @@ final class List {
         String str = "[";
         for (int i = 0; i < size1; i++) {
             if (i == size1 - 1) {
-              str = str + list_num[i];
+              str = str + list[i];
             } else {
-              str = str + list_num[i] + ",";
+              str = str + list[i] + ",";
             }
         }
         str += "]";
@@ -254,8 +254,8 @@ final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < list_num.length; i++) {
-            if (list_num[i] == item) {
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == item) {
             return true;
             }
         }
@@ -276,8 +276,8 @@ final class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < list_num.length; i++) {
-            if (list_num[i] == item) {
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == item) {
             return i;
             }
         }
