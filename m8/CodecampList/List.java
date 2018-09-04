@@ -99,13 +99,14 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
+        list_num1[size1] = item;
         size1 = size1+1;
-        for(int i = 0; i<list_num1.length; i++){
-			if (list_num1[i] == 0) {
-				list_num1[i] = item;
-				break;
-			}
-		}
+  //       for(int i = 0; i<list_num1.length; i++){
+		// 	if (list_num1[i] == 0) {
+		// 		list_num1[i] = item;
+		// 		break;
+		// 	}
+		// }
 		// System.out.println(Arrays.toString(list_num1));
     }
 
