@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.*;
+// import java.util.*;
 /**This is a program.**/
 final class List {
 
