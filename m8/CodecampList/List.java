@@ -176,12 +176,12 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        for (int i = 0; i<list_num1.length; i++) {
-        	if (i == index){
-            return list_num1[i];
-        	}      
+        if ((index >= 0) && (index <size1)) {
+        	return list_num1[index];
         }
-        return 0;
+        else {
+        	return -1;
+        }
     }
 
     /*
