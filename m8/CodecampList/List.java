@@ -6,7 +6,7 @@ final class List {
 
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -30,7 +30,7 @@ final class List {
     /**
      * '{ var_description }.
      */
-    private int[] list_num1;
+    private int[] list_num;
     private int size1;
     /**
      * { item_description }.
@@ -40,7 +40,7 @@ final class List {
     // don't create the array yet using new
     // that's the job of the List constructor
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -64,7 +64,7 @@ final class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -80,10 +80,11 @@ final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        // list_num1 = list_num;
-        // list_num1 = new int[10];
+        // list_num = list_num;
+        // list_num = new int[10];
         // size1 = size;
-        list_num1 = new int[10];
+        final int ten = 10;
+        list_num = new int[ten];
         size1 = 0;
     }
     /**
@@ -108,22 +109,22 @@ final class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        list_num1[size1] = item;
+        list_num[size1] = item;
         size1 = size1 + 1;
-  //       for(int i = 0; i<list_num1.length; i++){
-        //  if (list_num1[i] == 0) {
-        //      list_num1[i] = item;
+  //       for(int i = 0; i<list_num.length; i++){
+        //  if (list_num[i] == 0) {
+        //      list_num[i] = item;
         //      break;
         //  }
         // }
-        // System.out.println(Arrays.toString(list_num1));
+        // System.out.println(Arrays.toString(list_num));
     }
 
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     /**
@@ -165,15 +166,14 @@ final class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
 
-        if (index >= list_num1.length) {
+        if (index >= list_num.length) {
             System.out.println("Invalid Position Exception");
-        }
-        else {
+        } else {
         size1 = size1 - 1;
-        for (int i = index; i < list_num1.length - 1; i++) {
-            list_num1[i] = list_num1[i + 1];
+        for (int i = index; i < list_num.length - 1; i++) {
+            list_num[i] = list_num[i + 1];
         }
-        // System.out.println(Arrays.toString(list_num1));
+        // System.out.println(Arrays.toString(list_num));
         }
     }
 
@@ -196,7 +196,7 @@ final class List {
     public void get(final int index) {
         // Replace the code below to write the code for get
         if ((index >= 0) && (index < size1)) {
-            System.out.println(list_num1[index]);
+            System.out.println(list_num[index]);
         }
 
     }
@@ -231,9 +231,9 @@ final class List {
         String str = "[";
         for (int i = 0; i < size1; i++) {
             if (i == size1 - 1) {
-              str = str + list_num1[i];
+              str = str + list_num[i];
             } else {
-              str = str + list_num1[i] + ",";
+              str = str + list_num[i] + ",";
             }
         }
         str += "]";
@@ -254,8 +254,8 @@ final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < list_num1.length; i++) {
-            if (list_num1[i] == item) {
+        for (int i = 0; i < list_num.length; i++) {
+            if (list_num[i] == item) {
             return true;
             }
         }
@@ -276,8 +276,8 @@ final class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < list_num1.length; i++) {
-            if (list_num1[i] == item) {
+        for (int i = 0; i < list_num.length; i++) {
+            if (list_num[i] == item) {
             return i;
             }
         }
