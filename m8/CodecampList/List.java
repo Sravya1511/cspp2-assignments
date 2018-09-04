@@ -208,7 +208,13 @@ public class List {
         // Replace the code below
         String str = "[";
         for (int i = 0; i<size1; i++){
-        	str = str+list_num1[i]+",";
+        	if (i == size1-1) {
+              str = str+list_num1[i];
+        	}
+        	else {
+        	  str = str+list_num1[i]+",";	
+        	}
+        	
         }
         str += "]";
         return str;
