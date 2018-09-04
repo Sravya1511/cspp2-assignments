@@ -64,7 +64,7 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    public List( ) {
+    public List() {
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -81,9 +81,6 @@ public class List {
         // size1 = size;
         list_num1 = new int[10];
         size1 = 0;
-        
-
-
     }
     
     /*
@@ -100,7 +97,7 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         list_num1[size1] = item;
-        size1 = size1+1;
+        size1 = size1 + 1;
   //       for(int i = 0; i<list_num1.length; i++){
 		// 	if (list_num1[i] == 0) {
 		// 		list_num1[i] = item;
@@ -145,13 +142,13 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        size1 = size1 -1;
-        if (index>=list_num1.length) {
+        size1 = size1 - 1;
+        if (index >= list_num1.length) {
         	System.out.println("Invalid Position Exception");
         }
         else {
-        for (int i = index; i<list_num1.length-1; i++) {
-        	list_num1[i] = list_num1[i+1];
+        for (int i = index; i < list_num1.length - 1; i++) {
+        	list_num1[i] = list_num1[i + 1];
         }
         // System.out.println(Arrays.toString(list_num1));
         }
@@ -170,7 +167,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if ((index >= 0) && (index <size1)) {
+        if ((index >= 0) && (index < size1)) {
         	return list_num1[index];
         }
         return -1;
@@ -199,12 +196,12 @@ public class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for (int i = 0; i<size1; i++){
-        	if (i == size1-1) {
-              str = str+list_num1[i];
+        for (int i = 0; i < size1; i++){
+        	if (i == size1 - 1) {
+              str = str + list_num1[i];
         	}
         	else {
-        	  str = str+list_num1[i]+",";	
+        	  str = str + list_num1[i] + ",";	
         	}
         	
         }
@@ -220,7 +217,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for (int i = 0; i<list_num1.length; i++) {
+        for (int i = 0; i < list_num1.length; i++) {
         	if (list_num1[i] == item){
             return true;
         	}      
@@ -235,7 +232,7 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i = 0; i<list_num1.length; i++) {
+        for (int i = 0; i < list_num1.length; i++) {
         	if (list_num1[i] == item){
             return i;
         	}      
