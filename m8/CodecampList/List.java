@@ -27,15 +27,15 @@ final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    /**
+     * '{ var_description }.
+     */
     private int [] list_num1;
     private int size1;
     /**
      * { item_description }.
      */
 
-
-    
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
