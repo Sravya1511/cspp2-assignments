@@ -290,7 +290,7 @@ public class List {
             list[size++] = item;
         }
         else {
-             for(int i = (size); i > index; i--) {
+            for(int i = (size); i > index; i--) {
             list[i] = list[i-1];
             // System.out.println(Arrays.toString(list));
         }
