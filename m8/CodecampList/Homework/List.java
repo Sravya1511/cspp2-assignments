@@ -286,7 +286,7 @@ public class List {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         }
-        if ((index == 0) && (size == 0)) {
+        if (size == 0) {
             list[size++] = item;
         }
         else {
