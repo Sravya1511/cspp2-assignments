@@ -289,12 +289,15 @@ public class List {
         if ((index == 0) && (size == 0)) {
             list[size++] = item;
         }
-        for(int i = (size); i > index; i--) {
+        else {
+             for(int i = (size); i > index; i--) {
             list[i] = list[i-1];
             // System.out.println(Arrays.toString(list));
         }
         list[index] = item;
         size++;
+        }
+       
 
     }
     
