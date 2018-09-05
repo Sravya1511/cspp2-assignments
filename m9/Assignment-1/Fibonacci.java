@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.*;
+// import java.util.*;
 
 /*
  * In the previous module you have created List ADT.
@@ -22,7 +22,7 @@ import java.util.*;
  */
 /**This is a program.**/
 final class Fibonacci {
-    Fibonacci() { 
+    private Fibonacci() {
     }
     /*
      * fib is a static method takes a argument n
@@ -46,7 +46,7 @@ final class Fibonacci {
         l.add(a);
         l.add(b);
         int sum = 0;
-        for(int i = 2; i < n; i++) {
+        for (int i = 2; i < n; i++) {
             sum = a + b;
             l.add(sum);
             a = b;
