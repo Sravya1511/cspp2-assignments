@@ -285,6 +285,10 @@ public class List {
     public void addAll(int items[])
     {
         // write the logic 
+        if (items.length >size) {
+
+            resize(list.length);
+        }
            for(int i : items) {
             list[size] = i;
             size++;
