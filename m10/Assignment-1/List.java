@@ -336,7 +336,7 @@ final class List {
     public void addAll(final int items[])
     {
         // write the logic 
-        if (items.length > size) {
+        if (items.length > list.length) {
 
             resize(list.length);
         }
@@ -367,7 +367,7 @@ final class List {
         }
         else {
             for(int i = (size); i > index; i--) {
-            list[i] = list[i-1];
+            list[i] = list[i - 1];
             // System.out.println(Arrays.toString(list));
         }
         list[index] = item;
@@ -384,7 +384,7 @@ final class List {
         int c = 0;
         for (int i = 0; i < list.length; i++ ) {
             if (list[i] == item) {
-                c = c+1;
+                c = c + 1;
             }
         }
         return c;
