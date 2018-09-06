@@ -15,11 +15,11 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      namee  The namee
+     * @param      name  The name
      */
-    Student(final String namee) {
+    Student(final String name) {
         //A constructor used to initialize the instance variables
-        this.name = namee;
+        this.name = name;
     }
 
     /**
