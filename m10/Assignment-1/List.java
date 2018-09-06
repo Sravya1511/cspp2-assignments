@@ -333,21 +333,20 @@ final class List {
     /**
      * { item_description }.
      */
-    public void addAll(final int items[])
-    {
-        // write the logic 
+    public void addAll(final int items[]) {
+        // write the logic
         if (items.length > list.length) {
 
             resize(list.length);
         }
-           for(int i : items) {
+           for (int i : items) {
             list[size] = i;
             size++;
         }
     }
 
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
@@ -357,26 +356,24 @@ final class List {
          * @param      index  The index
          * @param      item   The item
          */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
          // write the logic
         if (index < 0) {
             System.out.println("Negative Index Exception");
-        }
-        else if (index == 0) {
+        } else if (index == 0) {
             list[size++] = item;
-        }
-        else {
-            for(int i = (size); i > index; i--) {
+        } else {
+            for (int i = (size); i > index; i--) {
             list[i] = list[i - 1];
             // System.out.println(Arrays.toString(list));
         }
         list[index] = item;
         size++;
         }
-       
+
 
     }
-    
+
     /* Returns the count of occurances of a given item in the list*/
     /**
      * { function_description }.
@@ -385,11 +382,10 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(final int item)
-    {
-         // write the logic 
+    public int count(final int item) {
+         // write the logic
         int c = 0;
-        for (int i = 0; i < list.length; i++ ) {
+        for (int i = 0; i < list.length; i++) {
             if (list[i] == item) {
                 c = c + 1;
             }
@@ -418,12 +414,11 @@ final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if ((tokens.length) == 2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else {
+                } else {
                     if (t.length > 1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
@@ -435,9 +430,10 @@ final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                int[] temp = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
@@ -464,6 +460,8 @@ final class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
