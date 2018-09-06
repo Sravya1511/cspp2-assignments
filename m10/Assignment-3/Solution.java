@@ -10,26 +10,26 @@ class Student {
     /**
      * initializing.
      */
-    private String name;
+    private String name1;
 
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      name1  The name1
      */
-    Student(final String name) {
+    Student(final String name1) {
         //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name1 = name1;
     }
 
     /**
-     * Gets the name.
+     * Gets the name1.
      *
-     * @return     The name.
+     * @return     The name1.
      */
     public String getName() {
         //Getter method which returns the value of instance variable
-        return this.name;
+        return this.name1;
     }
 
 
@@ -42,7 +42,7 @@ class Student {
      */
     @Override
     public boolean equals(final Object other) {
-        //This method is to check if two students names are equal or not
+        //This method is to check if two students name1s are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -66,7 +66,7 @@ class Student {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.name;
+        return this.name1;
     }
 }
 
