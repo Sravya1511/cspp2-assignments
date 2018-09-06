@@ -2,18 +2,37 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
 class Student {
+    /**
+     * { var_description }
+     */
     private String name;
-    
-    public Student(String name) {//A constructor used to initialize the instance variables
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    public Student(final String name) {//A constructor used to initialize the instance variables
         this.name = name;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
 
     public String getName() {//Getter method which returns the value of instance variable
         return this.name;
     }
 
     @Override
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean equals(final Object other) { //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -21,16 +40,29 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /**
+     * Returns a string representation of the object..
+     *
+     * @return     String representation of the object.
+     */
 
     public String toString() {
         return this.name;
     }
 }
+/**
+ * Class for solution..
+ */
 
 public class Solution {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
@@ -49,7 +81,7 @@ public class Solution {
                             listString.add(tokens[1]);
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         listString.addAll(t1);
                         }
@@ -71,13 +103,15 @@ public class Solution {
                         listString.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listString.indexOf(tokens[1]));
+System.out.println(listString.indexOf(tokens[1]));
                         break;
                         case "get":
-                        System.out.println(listString.get(Integer.parseInt(tokens[1])));
+System.out.println(listString.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listString.contains(tokens[1]));
+System.out.println(listString.contains(tokens[1]));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -96,10 +130,10 @@ public class Solution {
                             listInteger.add(Integer.parseInt(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for (int i = 0;i < temp.length; i++ ) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         listInteger.addAll(temp);
@@ -122,13 +156,15 @@ public class Solution {
                         listInteger.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listInteger.indexOf(Integer.parseInt((tokens[1]))));
+System.out.println(listInteger.indexOf(Integer.parseInt((tokens[1]))));
                         break;
                         case "get":
-                        System.out.println(listInteger.get(Integer.parseInt(tokens[1])));
+System.out.println(listInteger.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
+System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -147,10 +183,10 @@ public class Solution {
                             listFloat.add(Float.parseFloat(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if(tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float temp[] = new Float[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
@@ -173,13 +209,15 @@ public class Solution {
                         listFloat.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
+System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
+System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
+System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -198,10 +236,10 @@ public class Solution {
                             listCharacter.add(tokens[1].charAt(0));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if(tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = t1[i].charAt(0);
                         }
                         listCharacter.addAll(temp);
@@ -224,13 +262,15 @@ public class Solution {
                         listCharacter.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
+System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
                         break;
                         case "get":
-                        System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
+System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -249,10 +289,10 @@ public class Solution {
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if(tokens.length ==2 ){
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -275,13 +315,15 @@ public class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -300,10 +342,10 @@ public class Solution {
                             listStudent.add(new Student(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if (tokens.length == 2){
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
@@ -326,13 +368,15 @@ public class Solution {
                         listStudent.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listStudent.indexOf(new Student(tokens[1])));
+System.out.println(listStudent.indexOf(new Student(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listStudent.contains(new Student(tokens[1])));
+System.out.println(listStudent.contains(new Student(tokens[1])));
+                        break;
+                        default:
                         break;
                     }
                 }
