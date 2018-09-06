@@ -67,7 +67,7 @@ class Student {
  * Class for solution..
  */
 
-class Solution {
+public final class Solution {
     /**
      * { function_description }.
      *
