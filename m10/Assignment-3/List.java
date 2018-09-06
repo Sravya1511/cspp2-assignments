@@ -49,7 +49,7 @@ public class List<E> {
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        if (items.length > list.length) {
+        if (items.length > size) {
 
             resize(list.length);
         }
