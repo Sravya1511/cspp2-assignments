@@ -1,7 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
+//A Class is implemented for Student details.
 class Student {
+	/**
+	 * { var_description }.
+	 */
 	private String name;
 	
 	public Student(String name) {//A constructor used to initialize the instance variables
@@ -21,6 +24,11 @@ class Student {
 		Student that = (Student) other;
 		return this.getName().equals(that.getName());
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 
 	public String toString() {
 		return this.name;
@@ -28,9 +36,7 @@ class Student {
 }
 
 public class Solution {
-	
-
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
@@ -339,8 +345,8 @@ System.out.println(listStudent.contains(new Student(tokens[1])));
 		            }
 		        }
 	        	break;
-	        default:
-	        break;
+	    default:
+	    break;
     	}
 	}
 }
