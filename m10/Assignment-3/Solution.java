@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**program.**/
 class Student {
     /**
      * { var_description }.
@@ -20,7 +21,7 @@ class Student {
      * @return     The name.
      */
 
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() { 
         return this.name;
     }
 
@@ -32,7 +33,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final Object other) { 
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -181,7 +182,7 @@ System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
                         case "addAll":
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Float temp[] = new Float[t1.length];
+                        Float[] temp = new Float[t1.length];
                         for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
@@ -283,7 +284,7 @@ System.out.println(listCharacter.contains(tokens[1].charAt(0)));
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length ==2) {
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -335,7 +336,7 @@ System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
                             listStudent.add(new Student(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
                         for (int i = 0; i < t1.length; i++) {
