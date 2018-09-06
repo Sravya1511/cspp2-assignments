@@ -168,7 +168,7 @@ public class List<E> {
     public boolean contains(E item) {
 		//Write logic for contains method
         for (int i = 0; i < list.length; i++) {
-            if (list[i] == item) {
+            if (list[i].equals(item)) {
             return true;
             }
         }
