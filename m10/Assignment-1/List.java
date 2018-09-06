@@ -65,7 +65,7 @@ final class List {
      * Constructs the object..
      */
 
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -101,7 +101,7 @@ final class List {
      *
      * @param      capacity  The capacity
      */
-    public List(final int capacity) {
+    List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -146,7 +146,7 @@ final class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). 
+     * Create a method called resize().
      * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
@@ -282,8 +282,9 @@ final class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
