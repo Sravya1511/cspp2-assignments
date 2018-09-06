@@ -53,10 +53,10 @@ public class List<E> {
 
             resize(list.length);
         }
-           for(int i = 0; i<items.length; i++) {
-            list[size] = items[i];
-            size++;
-        }
+           for(E i : items) {
+                list[size++] = i;
+           }
+        
     }
 
     private void resize(final int x) {
