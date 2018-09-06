@@ -3,7 +3,7 @@ import java.util.Scanner;
 //A Class is implemented for Student details
 class Student {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String name;
     /**
@@ -11,7 +11,7 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(final String name) {//A constructor used to initialize the instance variables
+    public Student(final String name) {
         this.name = name;
     }
     /**
@@ -32,7 +32,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) { 
         if (!(other instanceof Student)) {
             return false;
         }
@@ -54,20 +54,19 @@ class Student {
  * Class for solution..
  */
 
-public class Solution {
+class Solution {
     /**
      * { function_description }.
      *
      * @param      args  The arguments
      */
-    
 
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
                 while (stdin.hasNext()) {
@@ -75,7 +74,6 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listString.add(tokens[1]);
@@ -124,7 +122,6 @@ System.out.println(listString.contains(tokens[1]));
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listInteger.add(Integer.parseInt(tokens[1]));
@@ -177,13 +174,12 @@ System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listFloat.add(Float.parseFloat(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length == 2) {
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float temp[] = new Float[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -230,13 +226,12 @@ System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listCharacter.add(tokens[1].charAt(0));
                         break;
                         case "addAll":
-                        if(tokens.length == 2) {
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -283,13 +278,12 @@ System.out.println(listCharacter.contains(tokens[1].charAt(0)));
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length ==2 ){
+                        if (tokens.length ==2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -305,7 +299,6 @@ System.out.println(listCharacter.contains(tokens[1].charAt(0)));
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString in StringList class
                         //for this to work)
                         // expected format is [item-1,item-2,...,item-n]
                         // review the output testcase file
@@ -329,14 +322,14 @@ System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O":
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list
                     switch (tokens[0]) {
                         case "add":
                             listStudent.add(new Student(tokens[1]));
