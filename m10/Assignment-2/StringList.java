@@ -12,7 +12,7 @@ interface StringListInterface
 }
 //Write a StringList class which implements StringListInterface 
 
-public class StringList implements StringListInterface{
+public class StringList {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
