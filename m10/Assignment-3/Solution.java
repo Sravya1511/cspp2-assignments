@@ -6,23 +6,23 @@ class Student {
     /**
      * { var_description }.
      */
-    private String name;
+    private String names;
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      names  The names
      */
-    public Student(final String name) {
-        this.name = name;
+    public Student(final String names) {
+        this.names = names;
     }
     /**
-     * Gets the name.
+     * Gets the names.
      *
-     * @return     The name.
+     * @return     The names.
      */
 
-    public String getName() { 
-        return this.name;
+    public String getName() {
+        return this.names;
     }
     /**
      * { function_description }.
@@ -60,7 +60,7 @@ class Student {
      */
 
     public String toString() {
-        return this.name;
+        return this.names;
     }
 }
 /**
@@ -71,7 +71,6 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-   
     private Solution() {
 
     }
