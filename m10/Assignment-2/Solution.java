@@ -2,6 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**program.**/
 final class Solution {
+    /**
+     * Constructs the object..
+     */
 
     private Solution() {
 
