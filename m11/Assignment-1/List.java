@@ -265,21 +265,22 @@ public class List {
     	}
     	return l2;
     	}
-    	
-
-
-
-
-
-   
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) 
+    public boolean equals(List list) 
     {
     // Replace the code below
+    if (this.size != list.size) {
+    	return false;
+    }
+    for(int i = 0; i<this.size; i++) {
+      if(this.list[i] != list.list[i]) {
+      	return false;
+      }
+    }
     return true;
     }
     /*
