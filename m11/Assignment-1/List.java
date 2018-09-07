@@ -361,18 +361,11 @@ public class List {
     }
     int c = 0;
     for (int i = 0; i < this.size; i++) {
-        for (int j = 0; j < list.size; j++) {
-            if (this.list[i] == list.list[j]) {
-            c++;
-        }
-      }
-    }
-    if (c == list.size) {
-        return true;
-    } else {
+       if (this.list[i] != list.list[i])
         return false;
     }
-    }
+    return true;
+}
     /*
     * Removes all the elements from list
     * Think about this case and make the method
