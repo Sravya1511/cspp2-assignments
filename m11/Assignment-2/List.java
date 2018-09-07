@@ -200,7 +200,7 @@ public class List<E> {
             return null;
         } else {
             int x = n2 - n;
-        List l2 = new List(x);
+        List <E> l2 = new List(x);
         for(int i = n; i < n2; i++) {
             l2.add(list[i]);
         }
