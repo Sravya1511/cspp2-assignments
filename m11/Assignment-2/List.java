@@ -212,19 +212,7 @@ public class List<E> {
      */
     public boolean equals(List<E> listdata)
     {
-        if (this.size != listdata.size) {
-        return false;
-    }
-    int c = 0;
-    for(int i = 0; i < this.size; i++) {
-        for(int j = 0; j<listdata.size; j++) {
-            if(this.list[i] == listdata.list[j]) {
-            c++;
-        }
-      }
-    }
-    if (c >= listdata.size) return true;
-    else return false;
+    return this.toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear()
