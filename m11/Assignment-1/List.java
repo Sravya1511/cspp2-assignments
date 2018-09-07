@@ -306,6 +306,7 @@ public class List {
                 if(list[i] == newArray[j]) {
                     remove(i);
                     i--;
+                    break;
                 }
 
         }
