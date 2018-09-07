@@ -217,15 +217,16 @@ public class List<E> {
     }
     int c = 0;
     for(int i = 0; i < this.size; i++) {
-        for(int j = 0; j<listdata.size; j++) {
-            if(this.list[i] == listdata.list[j]) {
-            c++;
+        // for(int j = 0; j<listdata.size; j++) {
+            if(this.list[i] != listdata.list[i]) {
+            return false;
         }
       }
+      return true;
     }
-    if (c == listdata.size) return true;
-    else return false;
-    }
+    // if (c == listdata.size) return true;
+    // else return false;
+
     /*Removes all the elements from list*/
     public void clear()
     {
