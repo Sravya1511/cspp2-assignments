@@ -358,12 +358,16 @@ public class List {
     if (this.size != list.size) {
     	return false;
     }
+    int c = 0;
     for(int i = 0; i < this.size; i++) {
-      if(this.list[i] != list.list[i]) {
-      	return false;
+    	for(int j = 0; j<list.size; j++) {
+    		if(this.list[i] == list.list[j]) {
+      	    c++;
+    	}
       }
     }
-    return true;
+    if (c == list.size) return true;
+    else return false;
     }
     /*
     * Removes all the elements from list
