@@ -305,6 +305,7 @@ public class List {
              for (int j = 0; j < newArray.length; j++) {
                 if(list[i] == newArray[j]) {
                     remove(i);
+                    i--;
                 }
 
         }
@@ -365,7 +366,8 @@ public class List {
         }
       }
     }
-    if (c >= list.size) {
+    if (c >
+         list.size) {
         return true;
     } else {
         return false;
