@@ -29,7 +29,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -51,7 +51,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -81,7 +81,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-     
+
     list = new int[10];
     size = 0;
     }
@@ -95,8 +95,8 @@ public class List {
     	list = new int[capacity];
     	size = 0;
     }
-    
-    
+
+
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -230,7 +230,7 @@ public class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -273,7 +273,7 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all.
@@ -292,8 +292,8 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
      /**
       * Removes all.
@@ -308,13 +308,13 @@ public class List {
 
         }
      }
-       
+
 
      }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -326,7 +326,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) 
+    public List subList(final int start, final int end)
     {
     // write the logic for subList
     	if (start < 0 || end < 0 || start > end) {
@@ -352,7 +352,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) 
+    public boolean equals(final List list)
     {
     // Replace the code below
     if (this.size != list.size) {
@@ -459,7 +459,7 @@ public class List {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null)
                         System.out.println(object);
                     break;
                 }
