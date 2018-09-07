@@ -365,7 +365,7 @@ public class List {
         }
       }
     }
-    if (c == list.size) {
+    if (c >= list.size) {
         return true;
     } else {
         return false;
