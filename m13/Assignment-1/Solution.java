@@ -82,9 +82,7 @@ class Set {
         }
            for (int i : items) {
 
-           	list[size] = i;
-            size++;
-
+           add(i);
         }
     }
 
