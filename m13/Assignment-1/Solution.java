@@ -45,20 +45,33 @@ class Set {
         return str;
     }
 
-    public boolean check(int item) {
-    	int c = 0;
-        for(int i : list){
-        	if (i == item);
-        	return false;
-        }
-        return true;
+    // public boolean check(int item) {
+    // 	int c = 0;
+    //     for(int i : list){
+    //     	if (i == item);
+    //     	return false;
+    //     }
+    //     return true;
 
-    }
+    // }
 
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
-        if (check(item))
+
+
+        if (size == 0)
         list[size++] = item;
+
+        else {
+        	int c = 0;
+        	for (int i:list){
+        		if(i == item)
+        			c = 1;
+        	}
+        	if (c==1)
+        	list[size++] = item;
+        }
+
     }
 
     public void add(final int[] items) {
@@ -68,10 +81,9 @@ class Set {
             resize(list.length);
         }
            for (int i : items) {
-           	if(check(i)) {
+
            	list[size] = i;
             size++;
-           	}
 
         }
     }
