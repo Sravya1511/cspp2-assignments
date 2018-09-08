@@ -10,10 +10,13 @@ import java.util.Arrays;
  * Class for set.
  */
 /**program.**/
-class Set {
+final class Set {
 
     //your code goes here...
     //Good luck :-)
+    /**
+     * { var_description }.
+     */
     public int size;
     /**
      * { var_description }.
