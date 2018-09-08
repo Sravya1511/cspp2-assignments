@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.*;
+import java.util.Arrays;
 /**
  * List of .
  */
@@ -66,6 +66,9 @@ public class List {
      * { var_description }.
      */
     private int[] list;
+    /**
+     * { var_description }.
+     */
     private int size;
     /**
      * Constructs the object.
@@ -80,9 +83,10 @@ public class List {
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
-        // That is the initial value to use for size.
+        // That is the initial value to use for size.4
+    final int ten = 10;
 
-    list = new int[10];
+    list = new int[ten];
     size = 0;
     }
     /**
@@ -361,8 +365,10 @@ public class List {
     }
     int c = 0;
     for (int i = 0; i < this.size; i++) {
-       if (this.list[i] != list.list[i])
-        return false;
+       if (this.list[i] != list.list[i]) {
+       	 return false;
+       }
+
     }
     return true;
 }
@@ -449,9 +455,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++) {
-                            a[i] = Integer.parseInt(t2[i]);
-                        }
+                        for (int i = 0; i < t2.length; i++)                             a[i] = Integer.parseInt(t2[i]);
                         l.removeAll(a);
                     }
                 break;
