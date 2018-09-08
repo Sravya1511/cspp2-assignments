@@ -76,10 +76,32 @@ class Set {
         }
     }
 
-     private void resize(final int x) {
+    private void resize(final int x) {
 
         list = Arrays.copyOf(list, 2 * x);
     }
+
+
+    public String intersection(Set t) {
+    	if(this.size == 0 || t.size == 0) {
+    		return "{}";
+    	}
+
+    	Set i = new Set();
+
+    	 for(int k = 0; k<this.size; k++) {
+         for(int j = 0; j<t.size; j++) {
+            if(this.list[k]==t.list[j]) {
+               i.add(list[k]);
+            }
+         }
+      }
+
+    	return i.toString();
+    	// System.out.println(t.toString());
+    }
+
+
 
 
 
@@ -150,15 +172,15 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(s.intersection(t));
-                // break;
+                case "intersection":
+                s = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
                 // case "retainAll":
                 // s = new Set();
                 // intArray = intArray(tokens[1]);
