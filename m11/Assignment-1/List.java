@@ -358,14 +358,14 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(final List listt) {
     // Replace the code below
-    if (this.size != list.size) {
+    if (this.size != listt.size) {
         return false;
     }
     int c = 0;
     for (int i = 0; i < this.size; i++) {
-       if (this.list[i] != list.list[i]) {
+       if (this.list[i] != listt.list[i]) {
          return false;
        }
 
