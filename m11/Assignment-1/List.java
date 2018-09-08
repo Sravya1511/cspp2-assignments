@@ -354,7 +354,7 @@ public class List {
     /**
      * { function_description }.
      *
-     * @param      list  The list
+     * @param      listt  The list
      *
      * @return     { description_of_the_return_value }
      */
