@@ -48,7 +48,7 @@ class Set {
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         int count = 0;
-        for(int i = 0; i<size; i++){
+        for(int i = 0; i<size; i++) {
         	if(list[i] != item){
         		count++;
         	}
@@ -64,8 +64,15 @@ class Set {
             resize(list.length);
         }
            for (int i : items) {
-            list[size] = i;
-            size++;
+           	int count = 0;
+           	for(int j = 0; j<size; j++) {
+           		if(list[j] != i) {
+           			count++;
+           		}
+
+           	}
+           	if(count == size)
+            list[size++] = i;
         }
     }
 
