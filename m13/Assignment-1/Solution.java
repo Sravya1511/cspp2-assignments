@@ -6,11 +6,18 @@ import java.util.Arrays;
  * Class for set.
  * @author :
  */
+/**
+ * Class for set.
+ */
 class Set {
     //your code goes here...
     //Good luck :-)
+
     int size;
     int [] list;
+    /**
+     * Constructs the object.
+     */
 
     Set() {
 
@@ -117,6 +124,25 @@ class Set {
     	}
     	return r.toString();
     }
+
+    public int[][] cartesianProduct(Set t){
+    	int c = this.size*t.size;
+    	int[][] arr;
+    	arr = new int[c][2];
+int	i = 0;
+    	    for(int k = 0; k<this.size; k++) {
+    	    	for(int j = 0; j<t.size; j++) {
+
+    			arr[i][0] = this.list[k];
+    			arr[i][1] = t.list[j];
+    			i++;
+
+    		}
+    	    }
+
+    return arr;
+
+    }
 }
 /**
  * Solution class for code-eval.
@@ -199,15 +225,15 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                // case "cartesianProduct":
-                // s = new Set();
-                // t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                // break;
+                case "cartesianProduct":
+                s = new Set();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                break;
                 default:
                 break;
             }
