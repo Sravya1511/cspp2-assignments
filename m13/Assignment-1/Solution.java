@@ -11,10 +11,14 @@ import java.util.Arrays;
  */
 /**program.**/
 class Set {
+
     //your code goes here...
     //Good luck :-)
     public int size;
-    public int [] list;
+    /**
+     * { var_description }.
+     */
+    public int[] list;
     /**
      * Constructs the object.
      */
@@ -107,8 +111,10 @@ class Set {
                 }
 
             }
-            if(count == size)
-            list[size++] = i;
+            if (count == size) {
+                list[size++] = i;
+            }
+
         }
     }
     /**
@@ -130,7 +136,7 @@ class Set {
      */
 
 
-    public String intersection(Set t) {
+    public String intersection(final Set t) {
         if (this.size == 0 || t.size == 0) {
             return "{}";
         }
