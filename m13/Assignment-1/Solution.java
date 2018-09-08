@@ -10,18 +10,18 @@ import java.util.Arrays;
  * Class for set.
  */
 /**program.**/
-final class Set {
+class Set {
 
     //your code goes here...
     //Good luck :-)
     /**
      * { var_description }.
      */
-    public int size;
+    private int size;
     /**
      * { var_description }.
      */
-    public int[] list;
+    private int[] list;
     /**
      * Constructs the object.
      */
@@ -298,9 +298,12 @@ public final class Solution {
                 t = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
+                int a = s.size();
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                if (t.size == 0 || s.size == 0) {
+                int b = t.size();
+
+                if (a == 0 || b == 0) {
                     System.out.println("null");
                 } else {
     System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
