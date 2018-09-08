@@ -307,7 +307,7 @@ public class List {
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < size; i++) {
              for (int j = 0; j < newArray.length; j++) {
-                if(list[i] == newArray[j]) {
+                if (list[i] == newArray[j]) {
                     remove(i);
                     i--;
                     break;
@@ -366,7 +366,7 @@ public class List {
     int c = 0;
     for (int i = 0; i < this.size; i++) {
        if (this.list[i] != list.list[i]) {
-       	 return false;
+         return false;
        }
 
     }
