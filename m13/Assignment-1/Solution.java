@@ -48,11 +48,11 @@ class Set {
     public boolean check(int item) {
     	int c = 0;
         for(int i : list){
-        	if (i != item);
-        	c++;
+        	if (i == item);
+        	return false;
         }
-        if (c == size) return true;
-        else return false;
+        return true;
+
     }
 
     public void add(final int item) {
