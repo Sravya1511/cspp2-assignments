@@ -11,7 +11,11 @@ class Set {
     //Good luck :-)
     int size;
     int [] list;
+
     Set() {
+
+    	list = new int[10];
+    	size = 0;
 
     }
 
@@ -43,8 +47,6 @@ class Set {
 
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
-
-
         list[size++] = item;
     }
 
