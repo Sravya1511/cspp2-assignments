@@ -9,6 +9,7 @@ import java.util.Arrays;
 /**
  * Class for set.
  */
+/**program.**/
 class Set {
     //your code goes here...
     //Good luck :-)
@@ -25,12 +26,24 @@ class Set {
     	size = 0;
 
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int size() {
     	return size;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
     	for (int i = 0; i < size; i++) {
             if (list[i] == item) {
             return true;
@@ -38,6 +51,11 @@ class Set {
         }
         return false;
     }
+    /**
+     * Returns a string representation of the object..
+     *
+     * @return     String representation of the object.
+     */
 
     public String toString() {
         if (size == 0) {
@@ -51,18 +69,28 @@ class Set {
         str = str + list[i] + "}";
         return str;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
 
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         int count = 0;
-        for(int i = 0; i<size; i++) {
-        	if(list[i] != item){
+        for (int i = 0; i < size; i++) {
+        	if (list[i] != item) {
         		count++;
         	}
         }
-        if(count == size)
+        if (count == size)
         list[size++] = item;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      items  The items
+     */
 
     public void add(final int[] items) {
         // write the logic
@@ -82,11 +110,23 @@ class Set {
             list[size++] = i;
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      x     { parameter_description }
+     */
 
     private void resize(final int x) {
 
         list = Arrays.copyOf(list, 2 * x);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      t     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
 
     public String intersection(Set t) {
@@ -96,9 +136,9 @@ class Set {
 
     	Set i = new Set();
 
-    	 for(int k = 0; k<this.size; k++) {
-         for(int j = 0; j<t.size; j++) {
-            if(this.list[k]==t.list[j]) {
+    	 for (int k = 0; k < this.size; k++) {
+         for (int j = 0; j < t.size; j++) {
+            if (this.list[k] == t.list[j]) {
                i.add(list[k]);
             }
          }
@@ -107,8 +147,15 @@ class Set {
     	return i.toString();
     	// System.out.println(t.toString());
     }
+    /**
+     * { function_description }.
+     *
+     * @param      intArray  The int array
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-    public String retainAll(int[] intArray) {
+    public String retainAll(final int[] intArray) {
     	if(this.size == 0 || intArray.length == 0) {
           return "{}";
     	}
@@ -117,24 +164,31 @@ class Set {
     	// return intArray;
     	Set r = new Set();
     	for (int i : this.list) {
-    		for(int j = 0; j<intArray.length; j++) {
-    			if(i == intArray[j])
+    		for (int j = 0; j < intArray.length; j++) {
+    			if (i == intArray[j])
     				r.add(i);
     		}
     	}
     	return r.toString();
     }
+    /**
+     * { function_description }.
+     *
+     * @param      t     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-    public int[][] cartesianProduct(Set t){
+    public int[][] cartesianProduct(final Set t) {
     	// if(t.size == 0 || this.size == 0) {
     	// 	return "null";
     	// }
-    	int c = this.size*t.size;
+    	int c = this.size * t.size;
     	int[][] arr;
     	arr = new int[c][2];
         int	i = 0;
-    	    for(int k = 0; k<this.size; k++) {
-    	    	for(int j = 0; j<t.size; j++) {
+    	    for (int k = 0; k < this.size; k++) {
+    	    	for (int j = 0; j < t.size; j++) {
 
     			arr[i][0] = this.list[k];
     			arr[i][1] = t.list[j];
@@ -235,11 +289,10 @@ public final class Solution {
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                if(t.size == 0 || s.size == 0){
+                if (t.size == 0 || s.size == 0) {
                 	System.out.println("null");
-                }
-                else {
-                	System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                } else {
+    System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 }
 
                 break;
