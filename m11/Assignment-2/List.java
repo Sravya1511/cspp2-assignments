@@ -18,7 +18,11 @@ public class List<E> {
         list = ((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
-    //Overloaded Constructor
+    //
+    // Overloaded Constructor
+    //
+    // @param      param  The parameter
+    //
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -38,6 +42,11 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(E[] items) {
         //Write logic for addAll method
          if (items.length > list.length - size) {
