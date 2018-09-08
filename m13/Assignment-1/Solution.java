@@ -146,13 +146,13 @@ class Set {
 
         Set i = new Set();
 
-         for (int k = 0; k < this.size; k++) {
-         for (int j = 0; j < t.size; j++) {
+    for (int k = 0; k < this.size; k++) {
+        for (int j = 0; j < t.size; j++) {
             if (this.list[k] == t.list[j]) {
                i.add(list[k]);
             }
-         }
-      }
+        }
+    }
 
         return i.toString();
         // System.out.println(t.toString());
@@ -205,7 +205,7 @@ class Set {
                 arr[i][1] = t.list[j];
                 i++;
 
-            }
+                }
             }
 
     return arr;
