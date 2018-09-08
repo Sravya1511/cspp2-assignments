@@ -59,18 +59,20 @@ class Set {
         //Inserts the specified element at the end of the zelist.
 
 
-        if (size == 0)
-        list[size++] = item;
+        // if (size == 0)
+        // list[size++] = item;
 
-        else {
+        // else {
         	int c = 0;
         	for (int i:list){
         		if(i == item)
         			c = 1;
         	}
         	if (c==1)
-        	list[size++] = item;
-        }
+        	list[size] = item;
+            size++;
+
+
 
     }
 
