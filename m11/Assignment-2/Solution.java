@@ -1,6 +1,6 @@
 /**
  * Generic List.
- * @author Nehru Perumalla.
+ * @author s.
  */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
@@ -590,5 +590,4 @@ public final class Solution {
         }
     }
 }
-
 
