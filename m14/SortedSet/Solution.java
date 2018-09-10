@@ -19,7 +19,7 @@ class SortedSet extends Set {
 		int j = 0;
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
-            return null;
+
 		}
 
 		else {
@@ -55,7 +55,10 @@ class SortedSet extends Set {
 	}
 
 	public int last() {
+		if(size == 0)
+			return -1;
 		return set[size-1];
+
 	}
 
 
