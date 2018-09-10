@@ -8,7 +8,7 @@ class SortedSet extends Set {
 
 	SortedSet() {
 		array = new int[10];
-		size = 10;
+		// size = 10;
 	}
 
 
@@ -53,7 +53,7 @@ class SortedSet extends Set {
 	}
 
 	public int last() {
-		return array[size-1];
+		return set[size-1];
 	}
 
 
