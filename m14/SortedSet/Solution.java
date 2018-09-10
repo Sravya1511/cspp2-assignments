@@ -17,6 +17,7 @@ class SortedSet extends Set {
 		SortedSet ss = new SortedSet();
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
+			return null;
 		}
 		else {
 
@@ -121,7 +122,7 @@ class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
-                System.out.println(s.last());
+                s.last();
 
 
 
