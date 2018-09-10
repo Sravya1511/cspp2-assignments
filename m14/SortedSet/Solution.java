@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
 /**
@@ -43,11 +43,7 @@ class SortedSet extends Set {
         if (start > stop) {
 System.out.println("Invalid Arguments to Subset Exception");
             return null;
-        }
-
-        else {
-
-
+        } else {
         for (int i : set) {
 
             if (i >= start && i < stop && i != 0) {
@@ -109,7 +105,7 @@ public final class Solution {
      * Constructs the object.
      */
 
-    Solution() {
+    private Solution() {
 
     }
     /**
