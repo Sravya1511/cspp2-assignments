@@ -2,32 +2,51 @@ import java.util.*;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
 class SortedSet extends Set {
+	/**
+	 * { var_description }.
+	 */
 
 	int[] array;
+	/**
+	 * { var_description }.
+	 */
 	int si;
+
+	/**
+	 * Constructs the object.
+	 */
 
 	SortedSet() {
 		array = new int[10];
 		si = 0;
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      start  The start
+	 * @param      stop   The stop
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
 
 
 
-	public int[] subSet(int start, int stop) {
-		int [] arr = new int[size];
+	public int[] subSet(final int start, final int stop) {
+		int[] arr = new int[size];
 		int j = 0;
 		if (start > stop) {
-			System.out.println("Invalid Arguments to Subset Exception");
+			System.out.println
+			("Invalid Arguments to Subset Exception");
             return null;
 		}
 
 		else {
 
 
-		for(int i : set) {
+		for (int i : set) {
 
-			if(i >= start && i < stop && i!=0) {
+			if (i >= start && i < stop && i != 0) {
 				arr[j] = i;
 				j++;
 
@@ -38,39 +57,64 @@ class SortedSet extends Set {
     return Arrays.copyOf(arr,j) ;
 
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      stop  The stop
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
-	public String headSet(int stop) {
+	public String headSet(final int stop) {
 		SortedSet ss = new SortedSet();
 		int j = 0;
-		for(int i : set) {
+		for (int i : set) {
 
-			if(i < stop && i!=0) {
+			if (i < stop && i != 0) {
 				ss.add(i);
 				j++;
 
 			}
 		}
 
-		return ss.toString() ;
+		return ss.toString();
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
 	public int last() {
-		if(size == 0) {
+		if (size == 0) {
             System.out.println("Set Empty Exception");
-			return -1;
+			return - 1;
 		}
-		return set[size-1];
+		return set[size - 1];
 
 	}
 
 
 }
+/**
+ * Class for solution.
+ */
 
-class Solution {
+public class Solution {
+	/**
+	 * Constructs the object.
+	 */
 
     Solution() {
 
     }
+    /**
+     * { function_description }.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public static int[] intArray(final String s) {
         String input = s;
@@ -122,10 +166,12 @@ class Solution {
                 case "subSet":
                 // int a = input.nextInt();
                 // int b = input.nextInt();
-                String [] a = tokens[1].split(",");
-                int [] res = s.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
+                String[] a = tokens[1].split(",");
+                int[] res = s.subSet(Integer.parseInt(a[0]),
+                	Integer.parseInt(a[1]));
                 if (res != null) {
-                	System.out.println(Arrays.toString(res).replace("[", "{").replace("]","}"));
+                	System.out.println(
+                		Arrays.toString(res).replace("[", "{").replace("]", "}"));
                 }
                 break;
                 case "headSet":
@@ -135,6 +181,8 @@ class Solution {
                 break;
                 case "last":
                 System.out.println(s.last());
+                default:
+                break;
 
 
 
