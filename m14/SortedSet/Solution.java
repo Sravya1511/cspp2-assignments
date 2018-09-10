@@ -19,6 +19,7 @@ class SortedSet extends Set {
 		int j = 0;
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
+            return null;
 		}
 
 		else {
@@ -32,9 +33,10 @@ class SortedSet extends Set {
 
 			}
 		}
-	}
 
-		return Arrays.copyOf(arr,j) ;
+	}
+    return Arrays.copyOf(arr,j) ;
+
 	}
 
 	public String headSet(int stop) {
