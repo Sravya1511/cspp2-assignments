@@ -8,14 +8,14 @@ class SortedSet extends Set {
 
 	SortedSet() {
 		array = new int[10];
-		// size = 10;
+		// si = 10;
 	}
 
 
 
 
 	public int[] subSet(int start, int stop) {
-		int [] arr = new int[size];
+		int [] arr = new int[10];
 		int j = 0;
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
