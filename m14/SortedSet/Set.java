@@ -82,7 +82,7 @@ public class Set {
      * @param arr as an arr to be added in this set,
      *            if the element is not present in this set.
      */
-    public void add(int[] arr) {
+    public void addAll(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             add(arr[i]);
         }

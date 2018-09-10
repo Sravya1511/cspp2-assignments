@@ -94,11 +94,11 @@ class Solution {
                 break;
                 case "add":
                 int[] intArray = intArray(tokens[1]);
-                if (intArray.length == 1) {
-                    s.add(intArray[0]);
-                } else {
-                    s.add(intArray);
-                }
+                s.add(intArray[0]);
+                break;
+                 case "addAll":
+                int[] intArr = intArray(tokens[1]);
+                s.addAll(intArr);
                 break;
                 case "subSet":
                 // int a = input.nextInt();
