@@ -1,98 +1,102 @@
 import java.util.*;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
+/**
+ * Class for sorted set.
+ */
+/**program.**/
 class SortedSet extends Set {
-	/**
-	 * { var_description }.
-	 */
+    /**
+     * { var_description }.
+     */
 
-	int[] array;
-	/**
-	 * { var_description }.
-	 */
-	int si;
+    private int[] array;
+    /**
+     * { var_description }.
+     */
+    private int si;
 
-	/**
-	 * Constructs the object.
-	 */
+    /**
+     * Constructs the object.
+     */
 
-	SortedSet() {
-		array = new int[10];
-		si = 0;
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      start  The start
-	 * @param      stop   The stop
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
+    SortedSet() {
+        final int ten = 10;
+        array = new int[ten];
+        si = 0;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      start  The start
+     * @param      stop   The stop
+     *
+     * @return     { description_of_the_return_value }
+     */
 
 
 
 
-	public int[] subSet(final int start, final int stop) {
-		int[] arr = new int[size];
-		int j = 0;
-		if (start > stop) {
-			System.out.println
-			("Invalid Arguments to Subset Exception");
+    public int[] subSet(final int start, final int stop) {
+        int[] arr = new int[size];
+        int j = 0;
+        if (start > stop) {
+System.out.println("Invalid Arguments to Subset Exception");
             return null;
-		}
+        }
 
-		else {
+        else {
 
 
-		for (int i : set) {
+        for (int i : set) {
 
-			if (i >= start && i < stop && i != 0) {
-				arr[j] = i;
-				j++;
+            if (i >= start && i < stop && i != 0) {
+                arr[j] = i;
+                j++;
 
-			}
-		}
+            }
+        }
 
-	}
-    return Arrays.copyOf(arr,j) ;
+    }
+    return Arrays.copyOf(arr, j);
 
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      stop  The stop
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      stop  The stop
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-	public String headSet(final int stop) {
-		SortedSet ss = new SortedSet();
-		int j = 0;
-		for (int i : set) {
+    public String headSet(final int stop) {
+        SortedSet ss = new SortedSet();
+        int j = 0;
+        for (int i : set) {
 
-			if (i < stop && i != 0) {
-				ss.add(i);
-				j++;
+            if (i < stop && i != 0) {
+                ss.add(i);
+                j++;
 
-			}
-		}
+            }
+        }
 
-		return ss.toString();
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
+        return ss.toString();
+    }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-	public int last() {
-		if (size == 0) {
+    public int last() {
+        if (size == 0) {
             System.out.println("Set Empty Exception");
-			return - 1;
-		}
-		return set[size - 1];
+            return -1;
+        }
+        return set[size - 1];
 
-	}
+    }
 
 
 }
@@ -100,10 +104,10 @@ class SortedSet extends Set {
  * Class for solution.
  */
 
-public class Solution {
-	/**
-	 * Constructs the object.
-	 */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
 
     Solution() {
 
@@ -168,10 +172,11 @@ public class Solution {
                 // int b = input.nextInt();
                 String[] a = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(a[0]),
-                	Integer.parseInt(a[1]));
+                    Integer.parseInt(a[1]));
                 if (res != null) {
-                	System.out.println(
-                		Arrays.toString(res).replace("[", "{").replace("]", "}"));
+                    System.out.println(
+                        Arrays.toString(res).
+                        replace("[", "{").replace("]", "}"));
                 }
                 break;
                 case "headSet":
