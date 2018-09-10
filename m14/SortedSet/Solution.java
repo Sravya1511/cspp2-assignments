@@ -125,7 +125,7 @@ class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
-                s.last();
+                System.out.println(s.last());
 
 
 
