@@ -4,18 +4,18 @@ import java.util.Arrays;
 class SortedSet extends Set {
 
 	int[] array;
-	int size;
+	int si;
 
 	SortedSet() {
 		array = new int[10];
-		// si = 10;
+		si = 0;
 	}
 
 
 
 
 	public int[] subSet(int start, int stop) {
-		int [] arr = new int[10];
+		int [] arr = new int[size];
 		int j = 0;
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
