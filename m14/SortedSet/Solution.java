@@ -47,7 +47,10 @@ class SortedSet extends Set {
 		}
 
 		return ss.toString() ;
+	}
 
+	public int last() {
+		return set[size-1];
 	}
 
 
@@ -117,6 +120,8 @@ class Solution {
                 // int b = input.nextInt();
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
+                case "last":
+                System.out.println(s.last());
 
 
 
