@@ -18,7 +18,7 @@ class SortedSet extends Set {
 		int j = 0;
 		for(int i : set) {
 
-			if(i >= start && i < stop) {
+			if(i >= start && i < stop && i!=0) {
 				ss.add(i);
 				j++;
 
