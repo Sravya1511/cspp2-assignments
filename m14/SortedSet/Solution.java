@@ -19,7 +19,7 @@ class SortedSet extends Set {
 		int j = 0;
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
-
+            return null;
 		}
 
 		else {
