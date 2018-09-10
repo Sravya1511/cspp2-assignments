@@ -15,7 +15,7 @@ class SortedSet extends Set {
 
 	public String subSet(int start, int stop) {
 		SortedSet ss = new SortedSet();
-		if (stop > set[size]) {
+		if (stop > set[size-1]) {
 			System.out.println("Invalid Arguments to Subset Exception");
 		}
 		else {
