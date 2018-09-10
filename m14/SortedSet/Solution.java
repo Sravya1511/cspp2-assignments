@@ -26,7 +26,7 @@ class SortedSet extends Set {
 		for(int i : set) {
 
 			if(i >= start && i < stop && i!=0) {
-				arr[j] = set[i];
+				arr[j] = i;
 				j++;
 
 			}
