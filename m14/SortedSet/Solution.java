@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.BufferedInputStream;
+import java.util.Arrays;
 class SortedSet extends Set {
 
 	int[] array;
@@ -13,8 +14,8 @@ class SortedSet extends Set {
 
 
 
-	public String subSet(int start, int stop) {
-		SortedSet ss = new SortedSet();
+	public int[] subSet(int start, int stop) {
+		int [] arr = new int[size];
 		if (start > stop) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
@@ -25,14 +26,14 @@ class SortedSet extends Set {
 		for(int i : set) {
 
 			if(i >= start && i < stop && i!=0) {
-				ss.add(i);
+				arr[j] = set[i];
 				j++;
 
 			}
 		}
 	}
 
-		return ss.toString() ;
+		return arr ;
 	}
 
 	public String headSet(int stop) {
@@ -114,7 +115,7 @@ class Solution {
                 // int a = input.nextInt();
                 // int b = input.nextInt();
                 String [] a = tokens[1].split(",");
-                System.out.println(s.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1])));
+                System.out.println(Arrays.toString(s.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]))));
                 break;
                 case "headSet":
                 // int a = input.nextInt();
