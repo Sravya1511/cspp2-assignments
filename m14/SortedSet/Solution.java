@@ -53,7 +53,7 @@ class SortedSet extends Set {
 	}
 
 	public int last() {
-		return set[size-1];
+		return array[size-1];
 	}
 
 
