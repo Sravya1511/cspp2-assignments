@@ -117,7 +117,8 @@ class Solution {
                 // int a = input.nextInt();
                 // int b = input.nextInt();
                 String [] a = tokens[1].split(",");
-                System.out.println(Arrays.toString(s.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]))));
+                int [] res = s.subSet(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
+                System.out.println(Arrays.toString(res).replace("[", "{").replace("]","{"));
                 break;
                 case "headSet":
                 // int a = input.nextInt();
