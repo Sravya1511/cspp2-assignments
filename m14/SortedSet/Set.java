@@ -201,4 +201,8 @@ public class Set {
         }
         return -1;
     }
+
+    public void setSize(int i){
+        size = i;
+    }
 }

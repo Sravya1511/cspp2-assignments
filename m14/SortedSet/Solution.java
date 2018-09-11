@@ -21,9 +21,14 @@ class SortedSet extends Set {
      */
 
     SortedSet() {
-        final int ten = 10;
-        array = new int[ten];
-        si = 0;
+    	array = new int[10];
+
+    }
+
+    SortedSet(int[] a) {
+        for(int i : a) {
+        	add(i);
+        }
     }
     /**
      * { function_description }.
@@ -92,6 +97,24 @@ System.out.println("Invalid Arguments to Subset Exception");
         }
         return set[size - 1];
 
+    }
+
+    public void add(int item) {
+    	if(size() == 0) {
+    		array[size()] = item;
+            setSize(size()+1);
+        }
+        int i;
+        for(i = 0; i<size(); i++) {
+        	if(array[i] > item) {
+        		break;
+        	}
+        }
+        for(int j = size()-1; j>i; j--){
+        	array[j+1] = array[j];
+        }
+        array[i] = item;
+        setSize(size()+1);
     }
 
 
