@@ -238,7 +238,7 @@ class Solution {
                         }
                         l.removeAll(a);
                     } catch(Exception m) {
-                    	System.out.println(m);
+                    	System.out.println("Invalid Position Exception");
                     }
 
                     	}
@@ -257,7 +257,7 @@ class Solution {
                     }
 
                     } catch(Exception m){
-                    	System.out.println(m);
+                    	System.out.println("Index Out of Bounds Exception");
                     }
 
                     break;
