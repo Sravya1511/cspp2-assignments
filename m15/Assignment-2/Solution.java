@@ -232,6 +232,7 @@ public final class Solution {
                 } catch(Exception m) {
                 	System.out.println("Set Empty Exception");
                 }
+                break;
                 case "intersection":
                 Set s1 = new Set();
                 Set t = new Set();
