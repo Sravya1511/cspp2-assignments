@@ -119,11 +119,10 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
      * @return     { description_of_the_return_value }
      */
 
-    public int last() throws Exception{
+    public int last() throws Exception {
         if (size == 0) {
             throw new InvalidException("Set Empty Exception");
-        }
-        else {
+        } else {
         	return set[size - 1];
         }
 
@@ -228,8 +227,8 @@ public final class Solution {
                         Arrays.toString(res).
                         replace("[", "{").replace("]", "}"));
 
-                } catch(Exception m){
-                	System.out.println("Invalid Arguments to Subset Exception");
+                } catch (Exception m) {
+System.out.println("Invalid Arguments to Subset Exception");
                 }
 
 
@@ -238,16 +237,16 @@ public final class Solution {
                 // int a = input.nextInt();
                 // int b = input.nextInt();
                 try {
-                	System.out.println(s.headSet(Integer.parseInt(tokens[1])));
-                } catch(Exception m) {
+System.out.println(s.headSet(Integer.parseInt(tokens[1])));
+                } catch (Exception m) {
                 	System.out.println("Set Empty Exception");
                 }
 
                 break;
                 case "last":
-                try{
+                try {
                 	System.out.println(s.last());
-                } catch(Exception m) {
+                } catch (Exception m) {
                 	System.out.println("Set Empty Exception");
                 }
                 break;
