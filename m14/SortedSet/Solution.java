@@ -99,23 +99,23 @@ System.out.println("Invalid Arguments to Subset Exception");
 
     }
 
-    public void add(int item) {
-    	if(size() == 0) {
-    		array[size()] = item;
-            setSize(size()+1);
-        }
-        int i;
-        for(i = 0; i<size(); i++) {
-        	if(array[i] > item) {
-        		break;
-        	}
-        }
-        for(int j = size()-1; j>i; j--){
-        	array[j+1] = array[j];
-        }
-        array[i] = item;
-        setSize(size()+1);
-    }
+    // public void add(int item) {
+    // 	if(size() == 0) {
+    // 		array[size()] = item;
+    //         setSize(size()+1);
+    //     }
+    //     int i;
+    //     for(i = 0; i<size(); i++) {
+    //     	if(array[i] > item) {
+    //     		break;
+    //     	}
+    //     }
+    //     for(int j = size()-1; j>i; j--){
+    //     	array[j+1] = array[j];
+    //     }
+    //     array[i] = item;
+    //     setSize(size()+1);
+    // }
 
 
 }
