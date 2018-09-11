@@ -236,7 +236,8 @@ class Solution {
      * @throws     Exception  { exception_description }
      */
 
-    public Solution subSolution(final int start, final int end) throws Exception {
+    public Solution
+    subSolution(final int start, final int end) throws Exception {
     if (start < 0 || end < 0
     || start > end || start == end || size == 0) {
             throw new InvalidException("Index Out of Bounds Exception");
