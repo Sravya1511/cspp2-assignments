@@ -244,7 +244,7 @@ class Solution {
                     	}
 
                 break;
-                case "subSolution":
+                case "subList":
                     if (tokens.length != 2) {
                      break;
                     }
