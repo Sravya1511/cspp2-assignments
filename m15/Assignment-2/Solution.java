@@ -242,7 +242,7 @@ public final class Solution {
                 System.out.println(s1.intersection(t));
                 break;
                 case "retainAll":
-                Set s2 = new SortedSet();
+                Set s2 = new Set();
                 intArray = intArray(tokens[1]);
                 s2.addAll(intArray);
                 intArray = intArray(tokens[2]);
