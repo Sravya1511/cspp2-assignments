@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -8,21 +8,26 @@ import java.util.Arrays;
 /**program.**/
 
 class InvalidException extends Exception {
-	InvalidException(final String s) {
-		super(s);
-	}
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    InvalidException(final String s) {
+        super(s);
+    }
 }
 /**
  * Class for solution..
  */
 class Solution {
-	/**
-	 * { var_description }.
-	 */
-	private int[] list;
-	/**
-	 * { var_description }.
-	 */
+    /**
+     * { var_description }.
+     */
+    private int[] list;
+    /**
+     * { var_description }.
+     */
     private int size;
     /**
      * Constructs the object..
@@ -36,36 +41,36 @@ class Solution {
     /**
      * Constructs the object.
      */
-	Solution() {
-		final int ten = 10;
-		list = new int[ten];
-		size = 0;
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      item  The item
-	 */
+    Solution() {
+        final int ten = 10;
+        list = new int[ten];
+        size = 0;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
 
-	public void add(final int item) {
-		list[size++] = item;
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @return     { description_of_the_return_value }
-	 */
+    public void add(final int item) {
+        list[size++] = item;
+    }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
 
-	public int size() {
-		return size;
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      x     { parameter_description }
-	 */
+    public int size() {
+        return size;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      x     { parameter_description }
+     */
 
-	private void resize(final int x) {
+    private void resize(final int x) {
         list = Arrays.copyOf(list, 2 * x);
     }
     /**
@@ -76,7 +81,7 @@ class Solution {
      * @throws     Exception  { exception_description }
      */
 
-	public void remove(final int index) throws Exception {
+    public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -232,8 +237,8 @@ class Solution {
      */
 
     public Solution subSolution(final int start, final int end) throws Exception {
-        if (start < 0 || end < 0 ||
-        	start > end || start == end || size == 0) {
+    if (start < 0 || end < 0
+    || start > end || start == end || size == 0) {
             throw new InvalidException("Index Out of Bounds Exception");
         } else {
             int x = end - start;
@@ -309,9 +314,9 @@ class Solution {
                 case "remove":
                     if (tokens.length == 2) {
                     try {
-                    	l.remove(Integer.parseInt(tokens[1]));
+                        l.remove(Integer.parseInt(tokens[1]));
                     } catch (Exception m) {
-                    	System.out.println("Invalid Position Exception");
+                        System.out.println("Invalid Position Exception");
                     }
                 }
                 break;
@@ -351,7 +356,7 @@ class Solution {
                 break;
                 case "removeAll":
                     if (tokens.length == 2) {
-                    	try {
+                        try {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
                         for (int i = 0; i < t2.length; i++) {
@@ -359,10 +364,10 @@ class Solution {
                         }
                         l.removeAll(a);
                     } catch (Exception m) {
-                    	System.out.println("Invalid Position Exception");
+                        System.out.println("Invalid Position Exception");
                     }
 
-                    	}
+                        }
 
                 break;
                 case "subList":
@@ -370,7 +375,7 @@ class Solution {
                      break;
                     }
                     try {
-                    	String[] arrstring3 = tokens[1].split(",");
+                        String[] arrstring3 = tokens[1].split(",");
                Solution obje = l.subSolution(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
                     if (obje != null) {
@@ -378,7 +383,7 @@ class Solution {
                     }
 
                     } catch (Exception m) {
-                    	System.out.println("Index Out of Bounds Exception");
+                        System.out.println("Index Out of Bounds Exception");
                     }
 
                     break;
