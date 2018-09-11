@@ -39,7 +39,7 @@ class Solution {
             }
             size--;
         } else {
-            throw new Exception("Invalid Position Exception");
+            throw new InvalidException("Invalid Position Exception");
         }
     }
 
@@ -128,7 +128,7 @@ class Solution {
 
     public Solution subSolution(final int start, final int end) throws Exception {
         if (start < 0 || end < 0 || start > end || start == end || size == 0) {
-            throw new Exception("Index Out of Bounds Exception");
+            throw new InvalidException("Index Out of Bounds Exception");
         } else {
             int x = end - start;
         Solution l2 = new Solution(x);
