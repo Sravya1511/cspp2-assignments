@@ -82,9 +82,11 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
             if (i < stop && i != 0) {
                 ss.add(i);
                 j++;
+
+
             }
         }
-        if(ss.si == 0) {
+        if(j == 0) {
         	throw new InvalidException("Set Empty Exception");
         }
         else {
