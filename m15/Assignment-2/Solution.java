@@ -233,20 +233,20 @@ public final class Solution {
                 	System.out.println("Set Empty Exception");
                 }
                 case "intersection":
-                s = new SortedSet();
+                Set s1 = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
-                s.addAll(intArray);
+                s1.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                System.out.println(s.intersection(t));
+                System.out.println(s1.intersection(t));
                 break;
                 case "retainAll":
-                s = new SortedSet();
+                Set s2 = new SortedSet();
                 intArray = intArray(tokens[1]);
-                s.addAll(intArray);
+                s2.addAll(intArray);
                 intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
+                System.out.println(s2.retainAll(intArray));
                 break;
                 default:
                 break;
