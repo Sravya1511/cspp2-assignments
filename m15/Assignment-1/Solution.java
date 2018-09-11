@@ -5,9 +5,10 @@ import java.util.Arrays;
 /**
  * Exception for signaling invalid errors.
  */
+/**program.**/
 
 class InvalidException extends Exception {
-	InvalidException(String s) {
+	InvalidException(final String s) {
 		super(s);
 	}
 }
@@ -18,11 +19,11 @@ class Solution {
 	/**
 	 * { var_description }.
 	 */
-	int[] list;
+	private int[] list;
 	/**
 	 * { var_description }.
 	 */
-    int size;
+    private int size;
     /**
      * Constructs the object..
      *
@@ -36,7 +37,8 @@ class Solution {
      * Constructs the object.
      */
 	Solution() {
-		list = new int[10];
+		final int ten = 10;
+		list = new int[ten];
 		size = 0;
 	}
 	/**
@@ -207,7 +209,7 @@ class Solution {
      * @throws     Exception  { exception_description }
      */
 
-    public void removeAll(final int[] newArray) throws Exception{
+    public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < size; i++) {
              for (int j = 0; j < newArray.length; j++) {
                 if (list[i] == newArray[j]) {
@@ -230,7 +232,8 @@ class Solution {
      */
 
     public Solution subSolution(final int start, final int end) throws Exception {
-        if (start < 0 || end < 0 || start > end || start == end || size == 0) {
+        if (start < 0 || end < 0 ||
+        	start > end || start == end || size == 0) {
             throw new InvalidException("Index Out of Bounds Exception");
         } else {
             int x = end - start;
@@ -307,7 +310,7 @@ class Solution {
                     if (tokens.length == 2) {
                     try {
                     	l.remove(Integer.parseInt(tokens[1]));
-                    } catch(Exception m) {
+                    } catch (Exception m) {
                     	System.out.println("Invalid Position Exception");
                     }
                 }
@@ -348,14 +351,14 @@ class Solution {
                 break;
                 case "removeAll":
                     if (tokens.length == 2) {
-                    	try{
+                    	try {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
                         for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
-                    } catch(Exception m) {
+                    } catch (Exception m) {
                     	System.out.println("Invalid Position Exception");
                     }
 
@@ -368,13 +371,13 @@ class Solution {
                     }
                     try {
                     	String[] arrstring3 = tokens[1].split(",");
-                    Solution obje = l.subSolution(Integer.parseInt(arrstring3[0]),
+               Solution obje = l.subSolution(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
                     if (obje != null) {
                         System.out.println(obje);
                     }
 
-                    } catch(Exception m){
+                    } catch (Exception m) {
                     	System.out.println("Index Out of Bounds Exception");
                     }
 
