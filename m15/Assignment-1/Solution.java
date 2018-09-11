@@ -8,14 +8,14 @@ class InvalidException extends Exception {
 		super(s);
 	}
 }
-class List {
+class Solution {
 	int[] list;
     int size;
-    List(final int capacity) {
+    Solution(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
-	List() {
+	Solution() {
 		list = new int[10];
 		size = 0;
 	}
@@ -126,12 +126,12 @@ class List {
         }
     }
 
-    public List subList(final int start, final int end) throws Exception {
+    public Solution subSolution(final int start, final int end) throws Exception {
         if (start < 0 || end < 0 || start > end || start == end || size == 0) {
             throw new Exception("Index Out of Bounds Exception");
         } else {
             int x = end - start;
-        List l2 = new List(x);
+        Solution l2 = new Solution(x);
         for (int i = start; i < end; i++) {
             l2.add(list[i]);
         }
@@ -139,7 +139,7 @@ class List {
         }
     }
 
-    public boolean equals(final List listt) {
+    public boolean equals(final Solution listt) {
     if (this.size != listt.size) {
         return false;
     }
@@ -159,7 +159,7 @@ class List {
 
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        List l = new List();
+        Solution l = new Solution();
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -244,13 +244,13 @@ class List {
                     	}
 
                 break;
-                case "subList":
+                case "subSolution":
                     if (tokens.length != 2) {
                      break;
                     }
                     try {
                     	String[] arrstring3 = tokens[1].split(",");
-                    List obje = l.subList(Integer.parseInt(arrstring3[0]),
+                    Solution obje = l.subSolution(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
                     if (obje != null) {
                         System.out.println(obje);
@@ -265,7 +265,7 @@ class List {
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
-                        List l2 = new List();
+                        Solution l2 = new Solution();
                         for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
