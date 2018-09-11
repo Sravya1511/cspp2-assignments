@@ -35,6 +35,24 @@ class SortedSet extends Set {
         	add(i);
         }
     }
+
+
+    public void add(final int item) {
+        if (!contains(item)) {
+            int index = getIndex(item);
+            add(index, item);
+        }
+    }
+    public int getIndex(final int item) {
+        for (int i = 0; i < size(); i++) {
+            if (item <= this.get(i)) {
+                return i;
+            }
+        }
+        return size();
+    }
+
+
     /**
      * { function_description }.
      *
