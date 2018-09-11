@@ -190,7 +190,7 @@ class Solution {
                     try {
                     	l.remove(Integer.parseInt(tokens[1]));
                     } catch(Exception m) {
-                    	System.out.println(m);
+                    	System.out.println("Invalid Position Exception");
                     }
                 }
                 break;
