@@ -2,35 +2,77 @@ import java.util.*;
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Exception for signaling invalid errors.
+ */
 
 class InvalidException extends Exception {
 	InvalidException(String s) {
 		super(s);
 	}
 }
+/**
+ * Class for solution..
+ */
 class Solution {
+	/**
+	 * { var_description }.
+	 */
 	int[] list;
+	/**
+	 * { var_description }.
+	 */
     int size;
+    /**
+     * Constructs the object..
+     *
+     * @param      capacity  The capacity
+     */
     Solution(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
+    /**
+     * Constructs the object.
+     */
 	Solution() {
 		list = new int[10];
 		size = 0;
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      item  The item
+	 */
 
-	public void add(int item) {
+	public void add(final int item) {
 		list[size++] = item;
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
 	public int size() {
 		return size;
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      x     { parameter_description }
+	 */
 
 	private void resize(final int x) {
         list = Arrays.copyOf(list, 2 * x);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
+     */
 
 	public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
@@ -42,6 +84,13 @@ class Solution {
             throw new InvalidException("Invalid Position Exception");
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int get(final int index) {
         if (index < 0 || index >= size) {
@@ -50,6 +99,11 @@ class Solution {
             return list[index];
         }
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
 
     public String toString() {
         if (size == 0) {
@@ -63,10 +117,24 @@ class Solution {
         str = str + list[i] + "]";
         return str;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
@@ -76,6 +144,11 @@ class Solution {
         }
         return -1;
     }
+    /**
+     * Adds all..
+     *
+     * @param      items  The items
+     */
 
     public void addAll(final int[] items) {
         if (items.length > list.length) {
@@ -87,6 +160,12 @@ class Solution {
             size++;
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
 
     public void add(final int index, final int item) {
         if (index < 0) {
@@ -102,6 +181,13 @@ class Solution {
         size++;
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int count(final int item) {
          // write the logic
@@ -113,6 +199,13 @@ class Solution {
         }
         return c;
     }
+    /**
+     * Removes all.
+     *
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
+     */
 
     public void removeAll(final int[] newArray) throws Exception{
         for (int i = 0; i < size; i++) {
@@ -125,6 +218,16 @@ class Solution {
             }
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      start      The start
+     * @param      end        The end
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
+     */
 
     public Solution subSolution(final int start, final int end) throws Exception {
         if (start < 0 || end < 0 || start > end || start == end || size == 0) {
@@ -138,6 +241,13 @@ class Solution {
         return l2;
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      listt  The listt
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public boolean equals(final Solution listt) {
     if (this.size != listt.size) {
@@ -151,10 +261,18 @@ class Solution {
     }
     return true;
     }
+    /**
+     * { function_description }.
+     */
 
     public void clear() {
         size = 0;
     }
+    /**
+     * .
+     *
+     * @param      args  The arguments.
+     */
 
 
     public static void main(final String[] args) {
