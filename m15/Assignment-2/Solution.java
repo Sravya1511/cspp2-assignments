@@ -1,10 +1,19 @@
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
+/**
+ *
+ * Exception for signaling invalid errors.
+ */
 class InvalidException extends Exception {
-	InvalidException(String s){
-		super(s);
-	}
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    InvalidException(final String s) {
+        super(s);
+    }
 }
 /**
  * Class for sorted set.
@@ -26,15 +35,20 @@ class SortedSet extends Set {
      */
 
     SortedSet() {
-    	array = new int[10];
+
 
     }
 
-    SortedSet(int[] a) {
+    SortedSet(final int[] a) {
         for(int i : a) {
-        	add(i);
+            add(i);
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
 
 
     public void add(final int item) {
@@ -43,6 +57,13 @@ class SortedSet extends Set {
             add(index, item);
         }
     }
+    /**
+     * Gets the index.
+     *
+     * @param      item  The item
+     *
+     * @return     The index.
+     */
     public int getIndex(final int item) {
         for (int i = 0; i < size(); i++) {
             if (item <= this.get(i)) {
@@ -56,15 +77,13 @@ class SortedSet extends Set {
     /**
      * { function_description }.
      *
-     * @param      start  The start
-     * @param      stop   The stop
+     * @param      start      The start
+     * @param      stop       The stop
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
-
-
-
-
     public int[] subSet(final int start, final int stop) throws Exception {
         int[] arr = new int[size()];
         int j = 0;
@@ -88,12 +107,15 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
     /**
      * { function_description }.
      *
-     * @param      stop  The stop
+     * @param      stop       The stop
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
 
-    public String headSet(final int stop) throws Exception{
+
+    public String headSet(final int stop) throws Exception {
         SortedSet ss = new SortedSet();
         int j = 0;
         for (int i : set) {
@@ -105,10 +127,10 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
             }
         }
         if (j == 0) {
-        	throw new InvalidException("Set Empty Exception");
+            throw new InvalidException("Set Empty Exception");
         }
         else {
-        	return ss.toString();
+            return ss.toString();
         }
 
 
@@ -117,31 +139,33 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
 
     public int last() throws Exception {
         if (size == 0) {
             throw new InvalidException("Set Empty Exception");
         } else {
-        	return set[size - 1];
+            return set[size - 1];
         }
 
 
     }
 
     // public void add(int item) {
-    // 	if(size() == 0) {
-    // 		array[size()] = item;
+    //  if(size() == 0) {
+    //      array[size()] = item;
     //         setSize(size()+1);
     //     }
     //     int i;
     //     for(i = 0; i<size(); i++) {
-    //     	if(array[i] > item) {
-    //     		break;
-    //     	}
+    //      if(array[i] > item) {
+    //          break;
+    //      }
     //     }
     //     for(int j = size()-1; j>i; j--){
-    //     	array[j+1] = array[j];
+    //      array[j+1] = array[j];
     //     }
     //     array[i] = item;
     //     setSize(size()+1);
@@ -220,7 +244,8 @@ public final class Solution {
                 // int a = input.nextInt();
                 // int b = input.nextInt();
                 String[] a = tokens[1].split(",");
-                try { int[] res = s.subSet(Integer.parseInt(a[0]),
+                try {
+                    int[] res = s.subSet(Integer.parseInt(a[0]),
                     Integer.parseInt(a[1]));
 
                 System.out.println(
@@ -239,15 +264,15 @@ System.out.println("Invalid Arguments to Subset Exception");
                 try {
 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 } catch (Exception m) {
-                	System.out.println("Set Empty Exception");
+                    System.out.println("Set Empty Exception");
                 }
 
                 break;
                 case "last":
                 try {
-                	System.out.println(s.last());
+                    System.out.println(s.last());
                 } catch (Exception m) {
-                	System.out.println("Set Empty Exception");
+                    System.out.println("Set Empty Exception");
                 }
                 break;
                 case "intersection":
@@ -277,32 +302,32 @@ System.out.println(s.headSet(Integer.parseInt(tokens[1])));
 
 
 // class Solution {
-// 	public static void main(String[] args) {
-// 		SortedSet obj = new SortedSet();
-// 		Scanner sc = mew Scanner(System.in);
-// 		int m = Integer.parseInt(sc.nextLine());
-// 		while(m > 0) {
-// 			m--;
-// 			String token = s.nextLine().split(" ");
-// 			switch(token[0]) {
-// 				case "add":
-// 				String[] input = tokens[1].split(",");
-// 				int[] arr = new int[input.length];
-// 				for(int i = 0; i <input.length; i++)
-// 					arr[i] = Integer.parseInt(input[i]);
-// 			    obj.addAll(input);
-// 				break;
-// 				case "addAll":
-// 				break;
-// 				case "subSet":
-// 				break;
-// 				case "headSet":
-// 				break;
-// 				case "last":
-// 				break;
-// 				default:
-// 				break;
-// 			}
-// 		}
-// 	 }
+//  public static void main(String[] args) {
+//      SortedSet obj = new SortedSet();
+//      Scanner sc = mew Scanner(System.in);
+//      int m = Integer.parseInt(sc.nextLine());
+//      while(m > 0) {
+//          m--;
+//          String token = s.nextLine().split(" ");
+//          switch(token[0]) {
+//              case "add":
+//              String[] input = tokens[1].split(",");
+//              int[] arr = new int[input.length];
+//              for(int i = 0; i <input.length; i++)
+//                  arr[i] = Integer.parseInt(input[i]);
+//              obj.addAll(input);
+//              break;
+//              case "addAll":
+//              break;
+//              case "subSet":
+//              break;
+//              case "headSet":
+//              break;
+//              case "last":
+//              break;
+//              default:
+//              break;
+//          }
+//      }
+//   }
 // }
