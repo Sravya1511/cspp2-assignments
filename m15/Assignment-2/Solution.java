@@ -38,9 +38,14 @@ class SortedSet extends Set {
 
 
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      a     { parameter_description }
+     */
 
     SortedSet(final int[] a) {
-        for(int i : a) {
+        for (int i : a) {
             add(i);
         }
     }
@@ -122,14 +127,11 @@ throw new InvalidException("Invalid Arguments to Subset Exception");
             if (i < stop && i != 0) {
                 ss.add(i);
                 j++;
-
-
             }
         }
         if (j == 0) {
             throw new InvalidException("Set Empty Exception");
-        }
-        else {
+        } else {
             return ss.toString();
         }
 
