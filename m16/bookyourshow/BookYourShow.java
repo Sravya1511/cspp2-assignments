@@ -74,14 +74,13 @@ public class BookYourShow {
              	        if(s.bookedSeats[i]!=null) {
              	            if(s.bookedSeats[i].mobile.equals(mobile)) {
              		            x = true;
+             		            System.out.println(mobile+" "+movieName+" "+date);
              	            }
                         }
 		            }
 	            }
 	        }
 	    }
-	    if(x == true) {
-	    	System.out.println(mobile+" "+movieName+" "+date);
-	    }
+
 	}
 }
