@@ -5,7 +5,7 @@ class Show {
 	String[] list;
 	Patron[] bookedSeats;
 
-	Show(String n, String d, String[] l) {
+	Show (String n, String d, String[] l) {
 		nameOfMovie = n;
 		date = d;
 		list = l;
@@ -27,9 +27,21 @@ class Show {
 class Patron {
 	String user;
 	String mobile;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      u     { parameter_description }
+	 * @param      m     { parameter_description }
+	 */
 
-	Patron(String u, String m) {
+	Patron(final String u, final String m) {
+		/**
+		 * { item_description }.
+		 */
 		user = u;
+		/**
+		 * { item_description }.
+		 */
 		mobile = m;
 	}
 }
@@ -57,6 +69,7 @@ class Patron {
 // }
 //
 //
+/**program.**/
 public final class Solution {
     /**
      * Constructs the object.
