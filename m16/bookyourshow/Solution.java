@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
 // public class Solution {
-// 	public static void main(String[] args) {
-// 		// Scanner input = new Scanner(system.in);
-// 		String movieName = "Mission Impossible";
+//  public static void main(String[] args) {
+//      // Scanner input = new Scanner(system.in);
+//      String movieName = "Mission Impossible";
 //         String datetime = "Aug 18, 2015 17:30";
 //         String[] seats = {"A1","A2","A3","B1","B2","B3","C1","C2"};
 //         Show show = new Show(movieName, datetime, seats);
@@ -16,7 +16,7 @@ import java.util.*;
 //         book.getAShow("Mission Impossible", "Aug 18, 2015 17:30");
 
 
-// 	}
+//  }
 // }
 //
 //
