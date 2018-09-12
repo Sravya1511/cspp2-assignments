@@ -33,7 +33,6 @@ public class BookYourShow {
 	}
 
 	public void bookAShow(String movieName, String date, Patron p, String[] listTic) {
-		boolean x = false;
 		for(Show s : showsList) {
 			if(s!=null) {
 		        if(s.nameOfMovie.equals(movieName) && s.date.equals(date)) {
@@ -42,15 +41,12 @@ public class BookYourShow {
             		    if(s.list[j].equals(seatNumber)) {
             			s.list[j] = "N/A";
             			s.bookedSeats[j] = p;
-            			x = true;
+
             		    }
             	    }
                 }
 		        }
             }
-	    }
-	    if(x == false) {
-	    	System.out.println("No show");
 	    }
 	}
 
