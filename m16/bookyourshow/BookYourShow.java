@@ -82,6 +82,8 @@ public class BookYourShow {
 	    }
 	    if(x == true) {
 	    	System.out.println(mobile+" "+movieName+" "+date);
+	    } else {
+	    	System.out.println("Invalid");
 	    }
 	}
 }
