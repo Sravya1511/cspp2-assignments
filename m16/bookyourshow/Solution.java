@@ -3,13 +3,13 @@ class Show {
 	String nameOfMovie;
 	String date;
 	String[] list;
-	// Patron[] bookedSeats;
+	Patron[] bookedSeats;
 
 	Show(String n, String d, String[] l) {
 		nameOfMovie = n;
 		date = d;
 		list = l;
-		// bookedSeats = new Patron(l.length);
+		bookedSeats = new Patron[l.length];
 	}
 
 	public String toString() {

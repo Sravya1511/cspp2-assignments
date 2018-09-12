@@ -40,7 +40,7 @@ public class BookYourShow {
             	    for(int j = 0; j<s.list.length; j++) {
             		    if(s.list[j].equals(seatNumber)) {
             			s.list[j] = "N/A";
-            			// s.bookedSeats[i] = p;
+            			s.bookedSeats[j] = p;
 
             		    }
             	    }
@@ -65,23 +65,23 @@ public class BookYourShow {
  //       }
 	// }
 
-	// public void printTickets(String movieName, String date, String mobile) {
-	// 	boolean a = false;
-	// 	for(Show s : showsList) {
-	// 		if(s!=null) {
-	// 	        if(s.nameOfMovie.equals(movieName) && s.date.equals(date)) {
- //                    for(int i = 0; i<s.bookedSeats.length; i++) {
- //             	        if(s.bookedSeats[i]!=null) {
- //             	            if(s.bookedSeats[i].mobile.equals(mobile)) {
- //             		            boolean a = true;
- //             	            }
- //                        }
-	// 	            }
-	//             }
-	//         }
-	//     }
-	//     if(a == true) {
-	//     	System.out.println(mobile+" "+movieName+" "+date);
-	//     }
-	// }
+	 public void printTickets(String movieName, String date, String mobile) {
+		boolean x = false;
+		for(Show s : showsList) {
+			if(s!=null) {
+		        if(s.nameOfMovie.equals(movieName) && s.date.equals(date)) {
+                    for(int i = 0; i<s.bookedSeats.length; i++) {
+             	        if(s.bookedSeats[i]!=null) {
+             	            if(s.bookedSeats[i].mobile.equals(mobile)) {
+             		            x = true;
+             	            }
+                        }
+		            }
+	            }
+	        }
+	    }
+	    if(x == true) {
+	    	System.out.println(mobile+" "+movieName+" "+date);
+	    }
+	}
 }
