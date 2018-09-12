@@ -40,11 +40,12 @@ public class BookYourShow {
 		// if(s.nameOfMovie.equals(movieName) && s.date.equals(date)) {
 
 		// }
+		int c = 0;
 		for(Show s : showsList) {
 			if(s!=null) {
 		        if(s.nameOfMovie.equals(movieName) && s.date.equals(date)) {
-
-                for(String seatNumber : listTic){
+		        	c = 1;
+                for(String seatNumber : listTic) {
             	    for(int j = 0; j<s.list.length; j++) {
             		    if(s.list[j].equals(seatNumber)) {
             			s.list[j] = "N/A";
@@ -55,6 +56,9 @@ public class BookYourShow {
                 }
 		        }
             }
+	    }
+	    if(c == 0){
+	    	System.out.println("No show");
 	    }
 
 	}
