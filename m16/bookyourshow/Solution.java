@@ -1,31 +1,54 @@
 import java.util.*;
 class Show {
+	/**
+	 * { var_description }.
+	 */
 	String nameOfMovie;
+	/**
+	 * { var_description }.
+	 */
 	String date;
+	/**
+	 * { var_description }.
+	 */
 	String[] list;
+	/**
+	 * { var_description }.
+	 */
 	Patron[] bookedSeats;
 
-	Show (String n, String d, String[] l) {
+	Show (final String n, final String d, final String[] l) {
 		nameOfMovie = n;
 		date = d;
 		list = l;
 		bookedSeats = new Patron[l.length];
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 
 	public String toString() {
         StringBuilder sb = new StringBuilder();
             sb.append(nameOfMovie + ",");
             sb.append(date + ",");
             sb.append("[");
-            for(int i = 0; i<list.length-1; i++) {
+            for (int i = 0; i < list.length - 1; i++) {
             	sb.append(list[i] + ",");
             }
-            sb.append(list[list.length-1] + "]");
+            sb.append(list[list.length - 1] + "]");
         return sb.toString();
     }
 }
 class Patron {
+	/**
+	 * { var_description }.
+	 */
 	String user;
+	/**
+	 * { var_description }.
+	 */
 	String mobile;
 	/**
 	 * Constructs the object.
