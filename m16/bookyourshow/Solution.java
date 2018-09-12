@@ -106,9 +106,9 @@ public final class Solution {
                     // }
                 break;
 
-                // case "print":
-                //     bys.printTicket(check[1], tokens[1], tokens[2]);
-                // break;
+                case "print":
+                    bys.printTicket(check[1], tokens[1], tokens[2]);
+                break;
 
                 case "showAll":
                     bys.showAll();

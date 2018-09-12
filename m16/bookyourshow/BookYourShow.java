@@ -65,7 +65,7 @@ public class BookYourShow {
  //       }
 	// }
 
-	 public void printTickets(String movieName, String date, String mobile) {
+	 public void printTicket(String movieName, String date, String mobile) {
 		boolean x = false;
 		for(Show s : showsList) {
 			if(s!=null) {
