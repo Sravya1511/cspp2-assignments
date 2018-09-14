@@ -73,7 +73,7 @@ class ShoppingCart {
 		for(Item i : catalogArray) {
 			if(i!= null) {
 				if(i.productName.equals(item.productName)) {
-					if(item.quantity <= item.quantity) {
+					if(item.quantity <= i.quantity) {
 						i.quantity -= item.quantity;
 						return true;
 					}
