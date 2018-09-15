@@ -23,7 +23,7 @@ class Quiz {
 	void printQuestions(int i) {
 		// if(questions[i]!=null)
 			System.out.println(questions[i].question+ "("+questions[i].marks+")");
-		System.out.println(questions[i].option1+"        "+questions[i].option2+"        "+questions[i].option3+"        "+questions[i].option4);
+		System.out.println(questions[i].option1+"		"+questions[i].option2+"		"+questions[i].option3+"		"+questions[i].option4);
 	    System.out.println("");
 	}
 
