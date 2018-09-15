@@ -63,13 +63,25 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        int x = 0;
+        if(questionCount == 0) {
+        	System.out.println("Quiz does not have questions");
+        }
+        else {
         for(int i = 0; i<questionCount; i++) {
         	String sen = s.nextLine();
         	String[] list1 = sen.split(":");
         	String[] list2 = list1[1].split(",");
+        	x = list1.length+list2.length;
         	quiz.addQuestion(new Questions(list1[0], list2[0], list2[1], list2[2], list2[3], Integer.parseInt(list1[2]), Integer.parseInt(list1[3]), Integer.parseInt(list1[4])));
         }
+        if(x == 9) {
         System.out.println(questionCount+" are added to the quiz");
+        }
+        else {
+        	System.out.println("Error! Malformed question");
+        }
+    }
 
     }
 
