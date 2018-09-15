@@ -103,7 +103,7 @@ public final class Solution {
         // System.out.println(quiz.question);
         for (int i = 0; i<4; i++) {
         	quiz.printQuestions(i);
-        	int m = s.nextInt();
+        	int m = Integer.parseInt(s.nextLine());
         	quiz.addresponse(m);
         }
 
