@@ -103,7 +103,7 @@ public final class Solution {
         // System.out.println(quiz.question);
         for (int i = 0; i<4; i++) {
         	quiz.printQuestions(i);
-        	int m = Integer.parseInt(s.nextLine());
+        	String m = s.nextLine();
         	quiz.addresponse(m);
         }
 
@@ -151,8 +151,8 @@ class Quiz {
 		System.out.println(questions[i].option1+"   "+questions[i].option2+"   "+questions[i].option3+"   "+questions[i].option4);
 		}
 
-	void addresponse(int m) {
-		responses[sizeres++] = m;
+	void addresponse(String m) {
+		responses[sizeres++] = Integer.parseInt(m);
 	}
 
 }
