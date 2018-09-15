@@ -67,20 +67,20 @@ public final class Solution {
         int x = 0;
         final int nine = 9;
         if(questionCount == 0) {
-        	System.out.println("Quiz does not have questions");
+            System.out.println("Quiz does not have questions");
+        } else {
+        for(int i = 0; i < questionCount; i++) {
+            String sen = s.nextLine();
+            String[] list1 = sen.split(":");
+            String[] list2 = list1[1].split(",");
+            x = list1.length + list2.length;
+ quiz.addQuestion(new Questions(list1[0], list2[0],
+    list2[1], list2[2], list2[3], Integer.parseInt(list1[2]), Integer.parseInt(list1[3]), Integer.parseInt(list1[4])));
         }
-        else {
-        for(int i = 0; i<questionCount; i++) {
-        	String sen = s.nextLine();
-        	String[] list1 = sen.split(":");
-        	String[] list2 = list1[1].split(",");
-        	x = list1.length+list2.length;
-        	quiz.addQuestion(new Questions(list1[0], list2[0], list2[1], list2[2], list2[3], Integer.parseInt(list1[2]), Integer.parseInt(list1[3]), Integer.parseInt(list1[4])));
-        }
-        if(x == nine) {
+        if (x == nine) {
         System.out.println(questionCount + " are added to the quiz");
         } else {
-        	System.out.println("Error! Malformed question");
+            System.out.println("Error! Malformed question");
         }
     }
 
@@ -94,7 +94,7 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
 public static void startQuiz(final Scanner s,
-	final Quiz quiz, final int answerCount) {
+    final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -104,9 +104,9 @@ public static void startQuiz(final Scanner s,
         // System.out.println(quiz.question);
         final int four = 4;
         for (int i = 0; i < four; i++) {
-        	quiz.printQuestions(i);
-        	String m = s.nextLine();
-        	quiz.addresponse(m);
+            quiz.printQuestions(i);
+            String m = s.nextLine();
+            quiz.addresponse(m);
         }
     }
 
