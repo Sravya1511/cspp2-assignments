@@ -19,6 +19,7 @@ public final class Solution {
     public static void main(final String[] args) {
          // instantiate this Quiz
         Quiz q = new Quiz();
+        // static int[] responses;
          // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
@@ -35,12 +36,12 @@ public final class Solution {
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
-                // case "START_QUIZ":
-                // System.out.println("|------------|");
-                // System.out.println("| Start Quiz |");
-                // System.out.println("|------------|");
-                // startQuiz(s, q, Integer.parseInt(tokens[1]));
-                // break;
+                case "START_QUIZ":
+                System.out.println("|------------|");
+                System.out.println("| Start Quiz |");
+                System.out.println("|------------|");
+                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                break;
                 // case "SCORE_REPORT":
                 // System.out.println("|--------------|");
                 // System.out.println("| Score Report |");
@@ -92,12 +93,26 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    // public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
-    //     // write your code here to display the quiz questions
-    //     // read the user responses from the console
-    //     // store the user respones in the quiz object
+    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+        // write your code here to display the quiz questions
+        // read the user responses from the console
+        // store the user respones in the quiz object
+        // responses  = new int[answerCount];
 
-    // }
+
+        // System.out.println(quiz.question);
+        for (int i = 0; i<4; i++) {
+        	quiz.printQuestions(i);
+        	int m = s.nextInt();
+        	quiz.addresponse(m);
+        }
+
+
+
+
+
+
+    }
 
     // /**
     //  * Displays the score report
@@ -111,16 +126,35 @@ public final class Solution {
 
 class Quiz {
 	Questions[] questions;
+	int [] responses;
+	int sizeres;
 	int size;
 
 	Quiz() {
 		questions = new Questions[20];
 		size = 0;
+		sizeres = 0;
+		responses = new int[4];
+
 	}
 
 	void addQuestion(Questions q) {
 		questions[size++] = q;
 	}
+
+	// Questions getQuiz(Questions q) {
+	// 	return q;
+	// }
+	void printQuestions(int i) {
+		// if(questions[i]!=null)
+			System.out.println(questions[i].question+ " ("+questions[i].marks+")");
+		System.out.println(questions[i].option1+"   "+questions[i].option2+"   "+questions[i].option3+"   "+questions[i].option4);
+		}
+
+	void addresponse(int m) {
+		responses[sizeres++] = m;
+	}
+
 }
 
 class Questions {
