@@ -42,12 +42,12 @@ public final class Solution {
                 System.out.println("|------------|");
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
-                // case "SCORE_REPORT":
-                // System.out.println("|--------------|");
-                // System.out.println("| Score Report |");
-                // System.out.println("|--------------|");
-                // displayScore(q);
-                // break;
+                case "SCORE_REPORT":
+                System.out.println("|--------------|");
+                System.out.println("| Score Report |");
+                System.out.println("|--------------|");
+                displayScore(q);
+                break;
                 default:
                 break;
             }
@@ -106,22 +106,18 @@ public final class Solution {
         	String m = s.nextLine();
         	quiz.addresponse(m);
         }
-
-
-
-
-
-
     }
 
-    // /**
-    //  * Displays the score report
-    //  *
-    //  * @param      quiz     The quiz object
-    //  */
-    // public static void displayScore(final Quiz quiz) {
-    //     // write your code here to display the score report
-    // }
+    /**
+     * Displays the score report
+     *
+     * @param      quiz     The quiz object
+     */
+    public static void displayScore(final Quiz quiz) {
+        // write your code here to display the score report
+
+      quiz.scoreReport();
+    }
 }
 
 class Quiz {
@@ -147,12 +143,23 @@ class Quiz {
 	// }
 	void printQuestions(int i) {
 		// if(questions[i]!=null)
-			System.out.println(questions[i].question+ " ("+questions[i].marks+")");
-		System.out.println(questions[i].option1+"   "+questions[i].option2+"   "+questions[i].option3+"   "+questions[i].option4);
-		}
+			System.out.println(questions[i].question+ "("+questions[i].marks+")");
+		System.out.println(questions[i].option1+"      "+questions[i].option2+"      "+questions[i].option3+"      "+questions[i].option4);
+	    System.out.println("\n");
+	}
 
 	void addresponse(String m) {
 		responses[sizeres++] = m;
+	}
+
+	void scoreReport() {
+		for(int i = 0; i<size; i++) {
+			System.out.println(questions[i].question);
+			String[] list = responses[i].split(" ");
+			if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+			}
+		}
 	}
 
 }
