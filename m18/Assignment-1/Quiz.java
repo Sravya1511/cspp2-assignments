@@ -34,6 +34,7 @@ class Quiz {
 
 	void scoreReport() {
 		int total = 0;
+		boolean x = false;
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].question);
 			String[] list = responses[i].split(" ");
@@ -41,35 +42,42 @@ class Quiz {
 				if(questions[i].optioncorrect == 1) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
+				x = true;
 			    }
 			}
 			if(list[1].equals("b")) {
 				if(questions[i].optioncorrect == 2) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
+				x = true;
 			    }
 			}
 			if(list[1].equals("c")) {
 				if(questions[i].optioncorrect == 3) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
+				x = true;
 			    }
 			}
 			if(list[1].equals("d")) {
 				if(questions[i].optioncorrect == 4) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
+				x = true;
 			    }
 			}
 
-			else if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
+			if(x == false) {
+				if (questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
 			}
+
 			else {
 				System.out.println(" Wrong Answer! - Penalty: "+questions[i].penalty);
 				total += questions[i].penalty;
 			}
+		  }
 		}
         System.out.println("Total Score: "+total);
 	}
