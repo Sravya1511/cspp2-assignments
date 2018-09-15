@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.*;
+// import java.util.*;
 
 /**
  * Solution class for code-eval.
@@ -60,22 +60,26 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+        final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int x = 0;
+        final int three = 3;
+        final int four = 4;
         final int nine = 9;
-        if(questionCount == 0) {
+        if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
         } else {
-        for(int i = 0; i < questionCount; i++) {
+        for (int i = 0; i < questionCount; i++) {
             String sen = s.nextLine();
             String[] list1 = sen.split(":");
             String[] list2 = list1[1].split(",");
             x = list1.length + list2.length;
  quiz.addQuestion(new Questions(list1[0], list2[0],
-    list2[1], list2[2], list2[3], Integer.parseInt(list1[2]), Integer.parseInt(list1[3]), Integer.parseInt(list1[4])));
+    list2[1], list2[2], list2[three], Integer.parseInt(list1[2]),
+    Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
         }
         if (x == nine) {
         System.out.println(questionCount + " are added to the quiz");
