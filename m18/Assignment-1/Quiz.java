@@ -28,6 +28,7 @@ class Quiz {
 	}
 
 	void addresponse(String m) {
+
 		responses[sizeres++] = m;
 	}
 
@@ -36,7 +37,32 @@ class Quiz {
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].question);
 			String[] list = responses[i].split(" ");
-			if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
+			if(list[1].equals("a")) {
+				if(questions[i].optioncorrect == 1) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+				total += questions[i].marks;
+			    }
+			}
+			if(list[1].equals("b")) {
+				if(questions[i].optioncorrect == 2) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+				total += questions[i].marks;
+			    }
+			}
+			if(list[1].equals("c")) {
+				if(questions[i].optioncorrect == 3) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+				total += questions[i].marks;
+			    }
+			}
+			if(list[1].equals("d")) {
+				if(questions[i].optioncorrect == 4) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+				total += questions[i].marks;
+			    }
+			}
+
+			else if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
 				total += questions[i].marks;
 			}
