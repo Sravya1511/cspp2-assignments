@@ -144,7 +144,7 @@ class Quiz {
 	void printQuestions(int i) {
 		// if(questions[i]!=null)
 			System.out.println(questions[i].question+ "("+questions[i].marks+")");
-		System.out.println(questions[i].option1+"      "+questions[i].option2+"      "+questions[i].option3+"      "+questions[i].option4);
+		System.out.println(questions[i].option1+"        "+questions[i].option2+"        "+questions[i].option3+"        "+questions[i].option4);
 	    System.out.println("\n");
 	}
 
@@ -153,13 +153,16 @@ class Quiz {
 	}
 
 	void scoreReport() {
+		int total = 0;
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].question);
 			String[] list = responses[i].split(" ");
 			if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
+				total += questions[i].marks;
 			}
 		}
+        System.out.println("Total Score: "+total);
 	}
 
 }
