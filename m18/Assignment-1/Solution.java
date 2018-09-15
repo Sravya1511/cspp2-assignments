@@ -126,7 +126,7 @@ public final class Solution {
 
 class Quiz {
 	Questions[] questions;
-	int [] responses;
+	String [] responses;
 	int sizeres;
 	int size;
 
@@ -134,7 +134,7 @@ class Quiz {
 		questions = new Questions[20];
 		size = 0;
 		sizeres = 0;
-		responses = new int[4];
+		responses = new String[4];
 
 	}
 
@@ -152,7 +152,7 @@ class Quiz {
 		}
 
 	void addresponse(String m) {
-		responses[sizeres++] = Integer.parseInt(m);
+		responses[sizeres++] = m;
 	}
 
 }
