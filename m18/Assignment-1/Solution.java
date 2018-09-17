@@ -8,6 +8,7 @@ public final class Solution {
      /**
      * Constructs the object.
      */
+    static boolean b = false;
     private Solution() {
         // leave this blank
     }
@@ -71,6 +72,8 @@ public final class Solution {
         final int nine = 9;
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
+            b = true;
+
         } else {
         for (int i = 0; i < questionCount; i++) {
             String sen = s.nextLine();
@@ -90,6 +93,8 @@ public final class Solution {
 
     }
 
+
+
     /**
      * Starts a quiz.
      *
@@ -106,12 +111,17 @@ public static void startQuiz(final Scanner s,
 
 
         // System.out.println(quiz.question);
+        if(b == true) {
+           return;
+        }
+        else {
         final int four = 4;
         for (int i = 0; i < four; i++) {
             quiz.printQuestions(i);
             String m = s.nextLine();
             quiz.addresponse(m);
         }
+      }
     }
 
     /**
