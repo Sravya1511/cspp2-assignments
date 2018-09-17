@@ -213,6 +213,7 @@ public final class Solution {
      /**
      * Constructs the object.
      */
+    static boolean b = false;
     private Solution() {
         // leave this blank
     }
@@ -244,13 +245,25 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                if(b == true) {
+                	return;
+                }
+                else {
+                	startQuiz(s, q, Integer.parseInt(tokens[1]));
+                }
+
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                displayScore(q);
+                if(b == true) {
+                	return;
+                }
+                else {
+                	displayScore(q);
+                }
+
                 break;
                 default:
                 break;
@@ -276,7 +289,7 @@ public final class Solution {
         final int nine = 9;
         if (q == 0) {
             System.out.println("Quiz does not have questions");
-
+                b = true;
         } else {
         for (int i = 0; i < q; i++) {
             String sen = scan.nextLine();
