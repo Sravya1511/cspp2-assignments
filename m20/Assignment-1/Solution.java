@@ -298,6 +298,11 @@ public final class Solution {
             	System.out.println("Error! Correct answer choice number is out of range for question text 1");
             	return;
             }
+            if(list3.length < 4) {
+            	b = true;
+            	System.out.println("trick question  does not have enough answer choices");
+            	return;
+            }
             x = list1.length + list2.length;
  quiz.addQuestion(new Question(list1[0], list3, Integer.parseInt(list1[2]),
     Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
