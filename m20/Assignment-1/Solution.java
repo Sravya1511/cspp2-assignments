@@ -177,8 +177,7 @@ class Quiz {
         	System.out.print(questions[i].getChoice()[j]+"	");
         }
         System.out.print(questions[i].getChoice()[questions[i].getChoice().length-1]);
-	    // System.out.println("");
-
+	    System.out.println("");
     }
     /**
      * Shows the report.
