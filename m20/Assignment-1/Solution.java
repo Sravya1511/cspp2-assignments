@@ -322,7 +322,6 @@ public final class Solution {
 			if(list1[0].equals("")) {
 				b = true;
 				System.out.println("Error! Malformed question");
-				System.out.println();
                 return;
 			}
 
