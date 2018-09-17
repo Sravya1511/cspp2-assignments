@@ -192,8 +192,9 @@ class Quiz {
 			String[] list = questions[i].getResponse().split(" ");
 			// System.out.println(questions[i].getCorrectAnswer());
 			// System.out.println(Integer.parseInt(list[1]));
+			String [] list1 = questions[i].getChoice()[questions[i].getCorrectAnswer()].split(" ");
 
-			if(questions[i].getChoice()[questions[i].getCorrectAnswer()].equals(questions[i].getResponse())) {
+			if(list1[1].equals(list[1])) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
 				total += questions[i].getMaxMarks();
 			}
