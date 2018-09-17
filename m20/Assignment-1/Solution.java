@@ -73,7 +73,7 @@ public final class Solution {
 		int x = 0;
 		final int three = 3;
 		final int four = 4;
-		final int nine = 9;
+		final int five = 5;
 		if (q == 0) {
 			System.out.println("Quiz does not have questions");
 				b = true;
@@ -88,24 +88,24 @@ System.out.println("trick question  does not have enough answer choices");
 				return;
 			}
 			// String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
-			if (list1.length < 5) {
+			if (list1.length < five) {
 				b = true;
 				System.out.println("Error! Malformed question");
 				return;
 			}
-			if (Integer.parseInt(list1[2]) > 4) {
+			if (Integer.parseInt(list1[2]) > four) {
 				b = true;
-				System.out.println("Error! Correct answer choice number is out of range for question text 1");
+System.out.println("Error! Correct answer choice number is out of range for question text 1");
 				return;
 			}
 			if (Integer.parseInt(list1[three]) < 0) {
 				b = true;
-				System.out.println("Invalid max marks for "+list1[0]);
+System.out.println("Invalid max marks for " + list1[0]);
 				return;
 			}
 			if (Integer.parseInt(list1[four]) > 0) {
 				b = true;
-				System.out.println("Invalid penalty for " + list1[0]);
+System.out.println("Invalid penalty for " + list1[0]);
 				return;
 			}
 			if (list1[0].equals("")) {
@@ -136,7 +136,7 @@ System.out.println("trick question  does not have enough answer choices");
 
 		// store the user respone in the question object
 		final int four = 4;
-		if (b == true) {
+		if (b) {
 			return;
 		} else {
 		for (int i = 0; i < q; i++) {
@@ -152,7 +152,7 @@ System.out.println("trick question  does not have enough answer choices");
 	 * @param      quiz     The quiz object
 	 */
 	public static void displayScore(final Quiz quiz) {
-		if (b == true) {
+		if (b) {
 			return;
 		} else {
 			quiz.showReport();
