@@ -288,6 +288,10 @@ public final class Solution {
             String[] list1 = sen.split(":");
             String[] list2 = list1[1].split(",");
             String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
+            if(list1.length < 5) {
+            	b = true;
+            	return;
+            }
             x = list1.length + list2.length;
  quiz.addQuestion(new Question(list1[0], list3, Integer.parseInt(list1[2]),
     Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
