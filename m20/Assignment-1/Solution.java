@@ -185,23 +185,23 @@ class Quiz {
      *
      * @return     { description_of_the_return_value }
      */
-//     public String showReport() {
-//        int total = 0;
-// 		for(int i = 0; i<size; i++) {
-// 			System.out.println(questions[i].question);
-// 			String[] list = responses[i].split(" ");
+    public void showReport() {
+       int total = 0;
+		for(int i = 0; i<size; i++) {
+			System.out.println(questions[i].getQuestionText());
+			String[] list = questions[i].getResponse().split(" ");
 
-// 			if(questions[i].optioncorrect == (Integer.parseInt(list[1]))) {
-// 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].marks);
-// 				total += questions[i].marks;
-// 			}
-// 			else {
-// 				System.out.println(" Wrong Answer! - Penalty: "+questions[i].penalty);
-// 				total += questions[i].penalty;
-// 			}
-// 		}
-//         System.out.println("Total Score: "+total);
-// 	}
+			if(questions[i].getCorrectAnswer() == (Integer.parseInt(list[1]))) {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
+				total += questions[i].getMaxMarks();
+			}
+			else {
+				System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
+				total += questions[i].getPenalty();
+			}
+		}
+        System.out.println("Total Score: "+total);
+	}
 }
 
 /**
@@ -320,7 +320,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
-        // quiz.showReport();
+        quiz.showReport();
     }
 }
 
