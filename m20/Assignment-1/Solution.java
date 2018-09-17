@@ -317,8 +317,6 @@ public final class Solution {
 
 		if (x == nine) {
 		System.out.println(q+ " are added to the quiz");
-		} else {
-			System.out.println("Error! Malformed question");
 		}
 	}
 
