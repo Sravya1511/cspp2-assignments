@@ -136,10 +136,9 @@ System.out.println("Invalid penalty for " + list1[0]);
 
         // store the user respone in the question object
         final int four = 4;
-        // if (b) {
-        //     return;
-        // } else {
-            if(q!=0){
+        if (b) {
+            return;
+        } else {
         for (int i = 0; i < q; i++) {
             quiz.printQuestion(i);
             String m = scan.nextLine();
