@@ -309,9 +309,11 @@ public final class Solution {
 	Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
 		}
 
-
+		if (x == nine) {
+		System.out.println(q+ " are added to the quiz");
+		} else {
 			System.out.println("Error! Malformed question");
-
+		}
 	}
 
 	}
