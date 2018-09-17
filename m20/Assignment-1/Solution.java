@@ -174,9 +174,9 @@ class Quiz {
     public void printQuestion(int i) {
     	System.out.println(questions[i].getQuestionText()+ "("+questions[i].getMaxMarks()+")");
         for(int j = 0; j<questions[i].getChoice().length-1; j++) {
-        	System.out.println(questions[i].getChoice()[j]+"	");
+        	System.out.print(questions[i].getChoice()[j]+"	");
         }
-        System.out.println(questions[i].getChoice()[questions[i].getChoice().length-1]);
+        System.out.print(questions[i].getChoice()[questions[i].getChoice().length-1]);
 	    // System.out.println("");
 
     }
