@@ -314,6 +314,15 @@ public final class Solution {
 				System.out.println("Invalid max marks for "+list1[0]);
 				return;
 			}
+			if(Integer.parseInt(list1[four]) > 0) {
+				b = true;
+				System.out.println("Invalid penalty for "+list1[0]);
+				return;
+			}
+			if(list1[0] == null) {
+				b = true;
+                return;
+			}
 
 			x = list1.length + list2.length;
  quiz.addQuestion(new Question(list1[0], list2, Integer.parseInt(list1[2]),
