@@ -29,6 +29,7 @@ class Question {
 	/**
 	 * Constructs the object.
 	 */
+	static boolean b = false;
 	Question() {
 
 	}
