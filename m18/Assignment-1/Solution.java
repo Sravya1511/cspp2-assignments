@@ -131,8 +131,13 @@ public static void startQuiz(final Scanner s,
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-
+    if(b == true) {
+        return;
+    }
+    else {
       quiz.scoreReport();
     }
+    }
 }
+
 
