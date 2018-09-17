@@ -193,7 +193,7 @@ class Quiz {
 			// System.out.println(questions[i].getCorrectAnswer());
 			// System.out.println(Integer.parseInt(list[1]));
 
-			if(questions[i].getCorrectAnswer() == (Integer.parseInt(list[1]))) {
+			if(questions[i].getChoice()[questions[i].getCorrectAnswer()].equals(questions[i].getResponse())) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
 				total += questions[i].getMaxMarks();
 			}
