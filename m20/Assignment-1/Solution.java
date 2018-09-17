@@ -314,10 +314,8 @@ public final class Solution {
  quiz.addQuestion(new Question(list1[0], list2, Integer.parseInt(list1[2]),
 	Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
 		}
-
-		if (x == nine) {
 		System.out.println(q+ " are added to the quiz");
-		}
+
 	}
 
 	}
