@@ -319,8 +319,9 @@ public final class Solution {
 				System.out.println("Invalid penalty for "+list1[0]);
 				return;
 			}
-			if(list1[0] == null) {
+			if(list1[0].equals("")) {
 				b = true;
+				System.out.println();
                 return;
 			}
 
