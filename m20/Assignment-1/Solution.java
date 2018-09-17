@@ -6,7 +6,8 @@ public final class Solution {
      /**
      * Constructs the object.
      */
-    static boolean b = false;
+    private static boolean b = false;
+
     /**
      * Constructs the object.
      */
@@ -135,9 +136,10 @@ System.out.println("Invalid penalty for " + list1[0]);
 
         // store the user respone in the question object
         final int four = 4;
-        if (b) {
-            return;
-        } else {
+        // if (b) {
+        //     return;
+        // } else {
+            if(q!=0){
         for (int i = 0; i < q; i++) {
             quiz.printQuestion(i);
             String m = scan.nextLine();
@@ -157,4 +159,7 @@ System.out.println("Invalid penalty for " + list1[0]);
             quiz.showReport();
         }
     }
+
+
+
 }
