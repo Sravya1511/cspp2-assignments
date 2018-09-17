@@ -58,6 +58,9 @@ class Question {
 	 * @return     { description_of_the_return_value }
 	 */
 	public boolean evaluateResponse(final String choice) {
+		if(this.choices[this.correctAnswer-1].equals(choice)){
+			return true;
+		}
 		return false;
 	}
 	/**
@@ -187,19 +190,22 @@ class Quiz {
 	 */
 	public void showReport() {
 	   int total = 0;
+	   boolean b = false;
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].getQuestionText());
 			String[] list = questions[i].getResponse().split(" ");
 			// System.out.println(questions[i].getCorrectAnswer());
 			// System.out.println(Integer.parseInt(list[1]));
 
-			if(questions[i].getCorrectAnswer() == (Integer.parseInt(list[1]))) {
-				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
-				total += questions[i].getMaxMarks();
-			}
-			else {
+			if(!questions[i].evaluateResponse(questions[i].getResponse())){
 				System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
 				total += questions[i].getPenalty();
+
+			}
+			else {
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
+				total += questions[i].getMaxMarks();
+
 			}
 		}
 		System.out.println("Total Score: "+total);
