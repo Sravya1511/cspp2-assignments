@@ -290,6 +290,12 @@ public final class Solution {
             String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
             if(list1.length < 5) {
             	b = true;
+            	System.out.println("Error! Malformed question");
+            	return;
+            }
+            if(Integer.parseInt(list1[2]) > 6) {
+            	b = true;
+            	System.out.println("Error! Correct answer choice number is out of range for question text 1");
             	return;
             }
             x = list1.length + list2.length;
