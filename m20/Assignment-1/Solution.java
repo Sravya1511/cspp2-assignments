@@ -245,24 +245,16 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                if(b == true) {
-                	return;
-                }
-                else {
                 	startQuiz(s, q, Integer.parseInt(tokens[1]));
-                }
+
 
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                if(b == true) {
-                	return;
-                }
-                else {
                 	displayScore(q);
-                }
+
 
                 break;
                 default:
@@ -322,11 +314,16 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         final int four = 4;
+        if(b == true) {
+        	return;
+        }
+        else {
         for (int i = 0; i < q; i++) {
             quiz.printQuestion(i);
             String m = scan.nextLine();
             quiz.getQuestion(i).setResponse(m);
         }
+       }
     }
     /**
      * Displays the score report.
@@ -335,7 +332,12 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
-        quiz.showReport();
+        if(b == true) {
+        	return;
+        }
+        else {
+        	quiz.showReport();
+        }
     }
 }
 
