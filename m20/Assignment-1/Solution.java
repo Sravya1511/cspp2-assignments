@@ -287,6 +287,11 @@ public final class Solution {
             String sen = scan.nextLine();
             String[] list1 = sen.split(":");
             String[] list2 = list1[1].split(",");
+            if(list2.length < 2) {
+            	b = true;
+            	System.out.println("trick question  does not have enough answer choices");
+            	return;
+            }
             String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
             if(list1.length < 5) {
             	b = true;
@@ -298,11 +303,7 @@ public final class Solution {
             	System.out.println("Error! Correct answer choice number is out of range for question text 1");
             	return;
             }
-            if(list2.length < 2) {
-            	b = true;
-            	System.out.println("trick question  does not have enough answer choices");
-            	return;
-            }
+
             x = list1.length + list2.length;
  quiz.addQuestion(new Question(list1[0], list3, Integer.parseInt(list1[2]),
     Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
