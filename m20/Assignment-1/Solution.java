@@ -293,7 +293,7 @@ public final class Solution {
             	System.out.println("Error! Malformed question");
             	return;
             }
-            if(Integer.parseInt(list1[2]) > 6) {
+            if(Integer.parseInt(list1[2]) > 4) {
             	b = true;
             	System.out.println("Error! Correct answer choice number is out of range for question text 1");
             	return;
