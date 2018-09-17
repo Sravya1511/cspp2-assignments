@@ -292,7 +292,7 @@ public final class Solution {
 				System.out.println("trick question  does not have enough answer choices");
 				return;
 			}
-			String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
+			// String [] list3 = {list2[0], list2[1], list2[2], list2[three]};
 			if(list1.length < 5) {
 				b = true;
 				System.out.println("Error! Malformed question");
