@@ -190,6 +190,8 @@ class Quiz {
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].getQuestionText());
 			String[] list = questions[i].getResponse().split(" ");
+			System.out.println(questions[i].getCorrectAnswer());
+			System.out.println(Integer.parseInt(list[1]));
 
 			if(questions[i].getCorrectAnswer() == (Integer.parseInt(list[1]))) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
