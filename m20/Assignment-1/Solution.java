@@ -46,7 +46,7 @@ class Question {
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
     	this.questiontext = question1;
     	this.choices = choices1;
-    	this.correctAnswer = correctAnswer;
+    	this.correctAnswer = correctAnswer1;
     	this.maxMarks = maxMarks1;
     	this.penalty = penalty1;
     }
