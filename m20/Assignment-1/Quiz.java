@@ -190,7 +190,6 @@ class Quiz {
 	 */
 	public void showReport() {
 	   int total = 0;
-	   boolean b = false;
 		for(int i = 0; i<size; i++) {
 			System.out.println(questions[i].getQuestionText());
 			String[] list = questions[i].getResponse().split(" ");

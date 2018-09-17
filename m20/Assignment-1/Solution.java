@@ -95,7 +95,8 @@ System.out.println("trick question  does not have enough answer choices");
             }
             if (Integer.parseInt(list1[2]) > four) {
                 b = true;
-System.out.println("Error! Correct answer choice number is out of range for question text 1");
+System.out.println(
+"Error! Correct answer choice number is out of range for question text 1");
                 return;
             }
             if (Integer.parseInt(list1[three]) < 0) {
