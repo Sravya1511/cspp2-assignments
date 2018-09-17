@@ -192,9 +192,8 @@ class Quiz {
 			String[] list = questions[i].getResponse().split(" ");
 			// System.out.println(questions[i].getCorrectAnswer());
 			// System.out.println(Integer.parseInt(list[1]));
-			String [] list1 = questions[i].getChoice()[questions[i].getCorrectAnswer()].split(" ");
 
-			if(Integer.parseInt(list1[1]) == Integer.parseInt((list[1]))) {
+			if(questions[i].getCorrectAnswer() == (Integer.parseInt(list[1]))) {
 				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
 				total += questions[i].getMaxMarks();
 			}
@@ -310,7 +309,8 @@ public final class Solution {
 	Integer.parseInt(list1[three]), Integer.parseInt(list1[four])));
 		}
 
-		System.out.println(q+ " are added to the quiz");
+
+			System.out.println("Error! Malformed question");
 
 	}
 
