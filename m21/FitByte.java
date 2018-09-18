@@ -129,27 +129,73 @@ class Summary {
         sleep = new Sleep[20];
      }
 
-     public void addFood(Food f) {
+    public void addFood(Food f) {
          food[foodSize++] = f;
-     }
+    }
+
+    public void foodlog() {
+     	System.out.println("FOOD");
+     	for(Food i: food) {
+     		if (i!= null) {
+     		    System.out.println("Date and Time:"+i.getDate());
+                System.out.println("Name:"+i.getnameOfFood());
+                System.out.println("Quantity:"+i.getQuantity());
+     		}
+     	}
+    }
 
      public void addWater(Water w) {
      	water[waterSize++] = w;
      }
 
+     public void waterlog() {
+     	System.out.println("WATER");
+     	for(int i = 0; i<waterSize; i++) {
+     		System.out.println("Date:"+water[i].getDate());
+     		System.out.println("Quantity:"+water[i].getAmount());
+     	}
+    }
+
      public void addPA(PhysicalActivity p) {
      	pa[paSize++] = p;
-     }
+    }
+
+    public void palog() {
+    	System.out.println("PhysicalActivity");
+    	for(int i = 0; i<paSize; i++) {
+                System.out.println("Name:"+pa[i].getActivityName());
+                System.out.println("Date:"+pa[i].getDate());
+                System.out.println("Starttime:"+pa[i].getStartTime());
+                System.out.println("Endtime:"+pa[i].getEndtime());
+        }
+    }
 
      public void addWeight(Weight w) {
      	weight[weightSize++] = w;
      }
 
+     public void weightlog() {
+     	System.out.println("Weight");
+     	for(int i = 0; i<weightSize; i++) {
+     		System.out.println("Date:"+weight[i].getDate());
+     		System.out.println("Weight:"+weight[i].getkgs());
+     		System.out.println("Fat:"+weight[i].getFat());
+     	}
+     }
      public void addSleep(Sleep s) {
      	sleep[sleepSize++] = s;
      }
+     public void sleeplog() {
+     	System.out.println("Sleep");
+     	for(int i = 0; i<sleepSize; i++) {
+     		System.out.println("Date:"+sleep[i].getDate());
+     		System.out.println("Starttime:"+sleep[i].getStartTime());
+     		System.out.println("Endtime:"+sleep[i].getEndtime());
+     	}
+     }
 
      public void show(String date) {
+     	System.out.println(date);
      	System.out.println("**Food Log**");
      	int c = 0;
      	for(int i = 0; i<foodSize; i++){
@@ -210,7 +256,6 @@ class Summary {
      	}
     }
 }
-
 class FitByte {
 	public static void main(String[] args) {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -236,6 +281,21 @@ class FitByte {
 				case "addSleep":
 				summary.addSleep(new Sleep(list1[1], list1[2], list1[3], list1[4]));
 				break;
+				case "Foodlog":
+				summary.foodlog();
+				break;
+				case "Waterlog":
+				summary.waterlog();
+				break;
+				case "Palog":
+				summary.palog();
+				break;
+				case "Weightlog":
+				summary.weightlog();
+				break;
+				case "Sleeplog":
+				summary.sleeplog();
+				break;
 				case "show":
 				if(list1.length ==1) {
 					summary.show(formatter.format(date));
@@ -243,7 +303,6 @@ class FitByte {
 				else {
 					summary.show(list1[1]);
 				}
-
 				break;
 			}
 		}
