@@ -76,6 +76,7 @@ class Solution {
 			for(int i = 0; i<files.length; i++) {
 				System.out.print(files[i]+"    ");
 			}
+			System.out.println();
 
 		    for(int i = 0; i<files.length; i++) {
 
