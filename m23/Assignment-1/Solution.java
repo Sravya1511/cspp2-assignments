@@ -90,7 +90,8 @@ class Solution {
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
-                        	System.out.print("a");
+                        	bags.getDistance();
+
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
@@ -99,7 +100,7 @@ class Solution {
 		    			bags.addDic2(tokens1);
                         }
                         catch(Exception e) {
-                        	System.out.print("Not found");
+                        	bags.getDistance();
                         }
 		    			bags.getDistance();
 		    			// System.out.println(i+" "+j);
