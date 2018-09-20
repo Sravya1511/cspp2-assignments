@@ -70,7 +70,7 @@ class Solution {
 	public static void main(String[] args) throws IOException {
         Scanner input= new Scanner(System.in);
         String x = input.nextLine();
-        try {
+
 			File file = new File(x);
 			File[] files = file.listFiles();
 			System.out.print("      		");
@@ -83,30 +83,38 @@ class Solution {
                    System.out.print(files[i]+"    ");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
-		    			Scanner s = new Scanner(files[i]);
-		    			// System.out.println(files[i]);
+                        try {
+                        	Scanner s = new Scanner(files[i]);
 		    			String line = s.useDelimiter("\\A").next();
 		    			String[] tokens = line.toLowerCase().split(" ");
-		    			// System.out.println(tokens);
 		    			bags.addDic1(tokens);
+                        }
+                        catch(Exception e) {
+                        	System.out.println("a");
+                        }
 
 
-		    			Scanner s1 = new Scanner(files[j]);
-		    			// System.out.println(files[j]);
+                        try {
+                        	Scanner s1 = new Scanner(files[j]);
 		    			String line1 = s1.useDelimiter("\\A").next();
 		    			String[] tokens1 = line1.toLowerCase().split(" ");
 		    			bags.addDic2(tokens1);
+                        }
+                        catch(Exception e) {
+                        	System.out.print("Not found");
+                        }
+
 
 		    			bags.getDistance();
 		    			// System.out.println(i+" "+j);
 		    	}
 		    	System.out.println();
 		    }
-		}
-		catch(Exception e) {
-			System.out.println("File not found");
+		// }
+		// catch(Exception e) {
+		// 	System.out.println("File not found");
 
-		}
+		// }
 
 
 	}
