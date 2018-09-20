@@ -90,10 +90,8 @@ class Solution {
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
-                        	System.out.println("a");
+                        	System.out.print("a");
                         }
-
-
                         try {
                         	Scanner s1 = new Scanner(files[j]);
 		    			String line1 = s1.useDelimiter("\\A").next();
@@ -103,20 +101,11 @@ class Solution {
                         catch(Exception e) {
                         	System.out.print("Not found");
                         }
-
-
 		    			bags.getDistance();
 		    			// System.out.println(i+" "+j);
 		    	}
 		    	System.out.println();
 		    }
-		// }
-		// catch(Exception e) {
-		// 	System.out.println("File not found");
-
-		// }
-
-
 	}
 }
   //       try {
