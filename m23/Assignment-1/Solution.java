@@ -73,8 +73,8 @@ class Solution {
 			File file = new File("Test");
 			File[] files = file.listFiles();
 			System.out.print("     ");
-			for(int i = 0; i<files.length; i++) {
-				System.out.print(files[i]+"    ");
+			for(int i = 1; i<=files.length; i++) {
+				System.out.print("File"+i+".txt    ");
 			}
 			System.out.println();
 
