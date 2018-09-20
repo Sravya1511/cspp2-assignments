@@ -72,7 +72,7 @@ class Solution {
 		try {
 			File file = new File("Test");
 			File[] files = file.listFiles();
-			System.out.print("     ");
+			System.out.print("      		");
 			for(int i = 1; i<=files.length; i++) {
 				System.out.print("File"+i+".txt    ");
 			}
