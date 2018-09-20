@@ -62,7 +62,7 @@ class BagOfWords {
 		den = Math.sqrt(a)*Math.sqrt(c);
 		res = (num/den)*100;
 		System.out.format("%.0f",res);
-		System.out.print("  ");
+		System.out.print("      ");
 		}
 }
 
@@ -79,7 +79,7 @@ class Solution {
 			System.out.println();
 
 		    for(int i = 0; i<files.length; i++) {
-
+                   System.out.println(files[i]+"    ");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
 		    			Scanner s = new Scanner(files[i]);
