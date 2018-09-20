@@ -72,6 +72,10 @@ class Solution {
 		try {
 			File file = new File("Test");
 			File[] files = file.listFiles();
+			System.out.print("     ");
+			for(int i = 0; i<files.length; i++) {
+				System.out.print(files[i]+"    ");
+			}
 
 		    for(int i = 0; i<files.length; i++) {
 
