@@ -68,9 +68,10 @@ class BagOfWords {
 
 class Solution {
 	public static void main(String[] args) throws IOException {
-
-		try {
-			File file = new File("Test");
+        Scanner input= new Scanner(System.in);
+        String x = input.nextLine();
+        try {
+			File file = new File(x);
 			File[] files = file.listFiles();
 			System.out.print("      		");
 			for(int i = 1; i<=files.length; i++) {
