@@ -68,21 +68,26 @@ class BagOfWords {
 
 class Solution {
 	public static void main(String[] args) throws IOException {
-		BagOfWords bags = new BagOfWords();
+
 		try {
 			File file = new File("Test");
 			File[] files = file.listFiles();
+
 		    for(int i = 0; i<files.length; i++) {
+
 		    	for(int j = 0; j<files.length; j++) {
+                        BagOfWords bags = new BagOfWords();
 		    			Scanner s = new Scanner(files[i]);
-		    			String line = s.nextLine();
+		    			// System.out.println(files[i]);
+		    			String line = s.useDelimiter("\\A").next();
 		    			String[] tokens = line.toLowerCase().split(" ");
 		    			// System.out.println(tokens);
 		    			bags.addDic1(tokens);
 
 
 		    			Scanner s1 = new Scanner(files[j]);
-		    			String line1 = s1.nextLine();
+		    			// System.out.println(files[j]);
+		    			String line1 = s1.useDelimiter("\\A").next();
 		    			String[] tokens1 = line1.toLowerCase().split(" ");
 		    			bags.addDic2(tokens1);
 
