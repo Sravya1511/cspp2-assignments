@@ -79,7 +79,7 @@ class Solution {
 			System.out.println();
 
 		    for(int i = 0; i<files.length; i++) {
-                   System.out.println(files[i]+"    ");
+                   System.out.print(files[i]+"    ");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
 		    			Scanner s = new Scanner(files[i]);
