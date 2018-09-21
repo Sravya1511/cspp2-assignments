@@ -114,8 +114,8 @@ class Solution {
 		    			System.out.format("%.0f", p);
 		    			System.out.print("		");
 		    			if(p>max && i!=j) {
-		    				 a = i;
-		    				 b = j;
+		    				 a = i+1;
+		    				 b = j+1;
 		    				 max = p;
 		    			}
 
