@@ -66,6 +66,7 @@ class BagOfWords {
 		}
 }
 
+
 class Solution {
 	public static void main(String[] args) throws IOException {
         Scanner input= new Scanner(System.in);
@@ -83,19 +84,21 @@ class Solution {
                    System.out.print("File"+i+".txt		");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
+                        // StringMatching match = new StringMatching();
                         try {
                         	Scanner s = new Scanner(files[i]);
 		    			String line = s.useDelimiter("\\A").next();
+		    			// match.str1(line);
 		    			String[] tokens = line.toLowerCase().split(" ");
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
                            System.out.print("No file");
-
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
 		    			String line1 = s1.useDelimiter("\\A").next();
+		    			// match.str2(line1);
 		    			String[] tokens1 = line1.toLowerCase().split(" ");
 		    			bags.addDic2(tokens1);
                         }
@@ -103,6 +106,7 @@ class Solution {
                         	System.out.print("No file");
                         }
 		    			bags.getDistance();
+		    			// match.compare();
 		    			// System.out.println(i+" "+j);
 		    	}
 		    	System.out.println();
