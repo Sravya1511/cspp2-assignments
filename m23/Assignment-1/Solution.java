@@ -84,7 +84,7 @@ class Solution {
 			}
 			System.out.println();
 
-		    for(int i = 0; i<files.length; i++) {
+		    for(int i = 1; i<=files.length; i++) {
                    System.out.print("File"+i+".txt"+"	");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
