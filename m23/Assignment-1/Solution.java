@@ -137,11 +137,19 @@ class Solution {
 	Solution() {
 
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args         The arguments
+	 *
+	 * @throws     IOException  { exception_description }
+	 */
 	public static void main(final String[] args) throws IOException {
 		double max = 0;
 		int a = 0;
 		int b = 0;
-        Scanner input= new Scanner(System.in);
+		StringMatching match = new StringMatching();
+        Scanner input = new Scanner(System.in);
         try {
         	String x = input.nextLine();
         	File file = new File(x);
@@ -161,7 +169,7 @@ class Solution {
                         try {
                         	Scanner s = new Scanner(files[i]);
 		    			String line = s.useDelimiter("\\A").next();
-		    			// match.str1(line);
+		    			match.str1(line);
 		    			String[] tokens = line.toLowerCase().split(" ");
 		    			bags.addDic1(tokens);
                         } catch (Exception e) {
@@ -170,7 +178,7 @@ class Solution {
                         try {
                         	Scanner s1 = new Scanner(files[j]);
 		    			String line1 = s1.useDelimiter("\\A").next();
-		    			// match.str2(line1);
+		    		    match.str2(line1);
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
 		    			bags.addDic2(tokens1);
@@ -185,9 +193,9 @@ class Solution {
 		    				 a = i + 1;
 		    				 b = j + 1;
 		    				 max = p;
-		    			}
-
-                    }
+		    			    }
+                        }
+                    // match.compare();
 		    	}
 		    	System.out.println();
 		    }
