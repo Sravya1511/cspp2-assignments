@@ -12,6 +12,7 @@ class BagOfWords {
 	Map<String, Integer> dictionary1 = new HashMap<String, Integer>();
 	Map<String, Integer> dictionary2 = new HashMap<String, Integer>();
 	Map<String, List<Integer>> dictionary3 = new HashMap<String, List<Integer>>();
+	double max;
 	BagOfWords() {
 	}
 
@@ -42,11 +43,11 @@ class BagOfWords {
         // System.out.println(key+" "+dictionary2.get(key));
 	}
 
-	public void getDistance() {
+	public double getDistance() {
 		float num = 0;
 		float a = 0;
 		double den = 0;
-		double res;
+        double res;
 		for(String i:dictionary1.keySet()){
 			if(dictionary2.containsKey(i)) {
                 num += dictionary1.get(i)*dictionary2.get(i);
@@ -63,16 +64,20 @@ class BagOfWords {
 		res = (num/den)*100;
 		//System.out.print("HHHHHH"+res);
 
-        System.out.format("%.0f",res);
-		System.out.print("		");
-
-
+        return res;
 		}
+
+	public void maxEle(){
+		System.out.println("Maximum similarity is between"+max);
+
+
+	}
 }
 
 
 class Solution {
 	public static void main(String[] args) throws IOException {
+		double max = 0;
         Scanner input= new Scanner(System.in);
         try {
         	String x = input.nextLine();
@@ -109,12 +114,15 @@ class Solution {
                         catch(Exception e) {
                         	System.out.print("No file");
                         }
-		    			bags.getDistance();
-		    			// match.compare();
-		    			// System.out.println(i+" "+j);
+		    			double p = bags.getDistance();
+		    			System.out.format("%.0f", p);
+		    			System.out.print("		");
+
+
 		    	}
 		    	System.out.println();
 		    }
+
         }
         catch(NoSuchElementException e) {
         	System.out.println("empty directory");
