@@ -113,7 +113,7 @@ class Solution {
 		    			double p = bags.getDistance();
 		    			System.out.format("%.0f", p);
 		    			System.out.print("		");
-		    			if(p>max && p!=100) {
+		    			if(p>max && i!=j) {
 		    				 a = i;
 		    				 b = j;
 		    				 max = p;
