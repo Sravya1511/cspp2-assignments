@@ -116,7 +116,8 @@ class Solution {
                         catch(Exception e) {
                         	System.out.print("No file");
                         }
-		    			double p = bags.getDistance();
+                        if(bags.getDistance()!=0) {
+                        double p = bags.getDistance();
 		    			System.out.format("%.0f", p);
 		    			System.out.print("		");
 		    			if(p>max && i!=j) {
@@ -125,7 +126,7 @@ class Solution {
 		    				 max = p;
 		    			}
 
-
+                        }
 		    	}
 		    	System.out.println();
 		    }
