@@ -80,7 +80,7 @@ class Solution {
 			File[] files = file.listFiles();
 			System.out.print("      		");
 			for(int i = 1; i<=files.length; i++) {
-				System.out.print("File"+i+".txt    ");
+				System.out.print("File"+i+".txt"+"	");
 			}
 			System.out.println();
 
@@ -117,7 +117,7 @@ class Solution {
 		    }
         }
         catch(NoSuchElementException e) {
-        	System.out.println("empty Directory");
+        	System.out.println("empty directory");
         }
     }
 
