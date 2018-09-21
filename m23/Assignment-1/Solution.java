@@ -74,9 +74,9 @@ class BagOfWords {
 class Solution {
 	public static void main(String[] args) throws IOException {
         Scanner input= new Scanner(System.in);
-        String x = input.nextLine();
-
-			File file = new File(x);
+        try {
+        	String x = input.nextLine();
+        	File file = new File(x);
 			File[] files = file.listFiles();
 			System.out.print("      		");
 			for(int i = 1; i<=files.length; i++) {
@@ -115,7 +115,12 @@ class Solution {
 		    	}
 		    	System.out.println();
 		    }
-	}
+        }
+        catch(NoSuchElementException e) {
+        	System.out.println("empty Directory");
+        }
+    }
+
 }
   //       try {
 		// 	File file2 = new File("input1.txt");
