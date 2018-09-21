@@ -100,7 +100,7 @@ class Solution {
 		    			bags.addDic2(tokens1);
                         }
                         catch(Exception e) {
-                        	System.out.print("File not found");
+                        	System.out.print("No file");
                         }
 		    			bags.getDistance();
 		    			// System.out.println(i+" "+j);
