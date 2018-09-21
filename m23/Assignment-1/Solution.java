@@ -62,8 +62,14 @@ class BagOfWords {
 		den = Math.sqrt(a)*Math.sqrt(c);
 		res = (num/den)*100;
 		//System.out.print("HHHHHH"+res);
+        if (Double.isNaN(res)) {
+        	return 0;
+        }
+        else {
+        	return res;
+        }
 
-        return res;
+
 		}
 }
 
