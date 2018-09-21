@@ -85,7 +85,8 @@ class Solution {
 			System.out.println();
 
 		    for(int i = 0; i<files.length; i++) {
-                   System.out.print("File"+i+1+".txt"+"	");
+		    	int h = i+1;
+                   System.out.print("File"+h+".txt"+"	");
 		    	for(int j = 0; j<files.length; j++) {
                         BagOfWords bags = new BagOfWords();
                         // StringMatching match = new StringMatching();
@@ -113,15 +114,15 @@ class Solution {
 		    			System.out.format("%.0f", p);
 		    			System.out.print("		");
 		    			if(p>max && p!=100) {
-		    				 a = i;
-		    				 b = j;
+		    				 a = i+1;
+		    				 b = j+1;
 		    			}
 
 
 		    	}
 		    	System.out.println();
 		    }
-		    System.out.println("Maximum similarity is between "+"File"+a+1+".txt and File"+b+1+".txt");
+		    System.out.println("Maximum similarity is between "+"File"+a+".txt and File"+b+".txt");
 
         }
         catch(NoSuchElementException e) {
