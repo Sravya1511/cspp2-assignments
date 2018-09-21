@@ -61,9 +61,12 @@ class BagOfWords {
 		}
 		den = Math.sqrt(a)*Math.sqrt(c);
 		res = (num/den)*100;
-		System.out.print("HHHHHH"+res);
-		System.out.format("%.0f",res);
+		//System.out.print("HHHHHH"+res);
+
+        System.out.format("%.0f",res);
 		System.out.print("		");
+
+
 		}
 }
 
