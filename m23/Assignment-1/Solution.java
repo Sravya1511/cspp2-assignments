@@ -104,7 +104,7 @@ class Solution {
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
-                           System.out.print("No file");
+                           System.out.print("No file     ");
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
@@ -114,7 +114,7 @@ class Solution {
 		    			bags.addDic2(tokens1);
                         }
                         catch(Exception e) {
-                        	System.out.print("NoFile     ");
+                        	System.out.print("NoFile");
                         }
                         if(bags.getDistance()!=0) {
                         double p = bags.getDistance();
