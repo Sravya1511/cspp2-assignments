@@ -12,7 +12,6 @@ class BagOfWords {
 	Map<String, Integer> dictionary1 = new HashMap<String, Integer>();
 	Map<String, Integer> dictionary2 = new HashMap<String, Integer>();
 	Map<String, List<Integer>> dictionary3 = new HashMap<String, List<Integer>>();
-	double max;
 	BagOfWords() {
 	}
 
@@ -66,18 +65,14 @@ class BagOfWords {
 
         return res;
 		}
-
-	public void maxEle(){
-		System.out.println("Maximum similarity is between"+max);
-
-
-	}
 }
 
 
 class Solution {
 	public static void main(String[] args) throws IOException {
 		double max = 0;
+		int a = 0;
+		int b= 0;
         Scanner input= new Scanner(System.in);
         try {
         	String x = input.nextLine();
@@ -117,11 +112,16 @@ class Solution {
 		    			double p = bags.getDistance();
 		    			System.out.format("%.0f", p);
 		    			System.out.print("		");
+		    			if(max>p) {
+		    				 a = i;
+		    				 b = j;
+		    			}
 
 
 		    	}
 		    	System.out.println();
 		    }
+		    System.out.println("Maximum similarity is between "+"File"+a+".txt and File"+b+".txt");
 
         }
         catch(NoSuchElementException e) {
