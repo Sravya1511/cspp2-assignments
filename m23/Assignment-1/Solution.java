@@ -116,7 +116,7 @@ class Solution {
 		    			if(p>max && p!=100) {
 		    				 a = i;
 		    				 b = j;
-		    				 p = max;
+		    				 max = p;
 		    			}
 
 
