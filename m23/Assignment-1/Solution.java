@@ -169,7 +169,7 @@ class Solution {
                         try {
                         	Scanner s = new Scanner(files[i]);
 		    			String line = s.useDelimiter("\\A").next();
-		    			match.str1(line);
+		    			// match.str1(line);
 		    			String[] tokens = line.toLowerCase().split(" ");
 		    			bags.addDic1(tokens);
                         } catch (Exception e) {
@@ -178,7 +178,7 @@ class Solution {
                         try {
                         	Scanner s1 = new Scanner(files[j]);
 		    			String line1 = s1.useDelimiter("\\A").next();
-		    		    match.str2(line1);
+		    		    // match.str2(line1);
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
 		    			bags.addDic2(tokens1);
