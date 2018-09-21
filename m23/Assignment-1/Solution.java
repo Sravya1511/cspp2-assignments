@@ -114,7 +114,7 @@ class Solution {
 		    			bags.addDic2(tokens1);
                         }
                         catch(Exception e) {
-                        	System.out.print("No file");
+                        	System.out.print("No file   ");
                         }
                         if(bags.getDistance()!=0) {
                         double p = bags.getDistance();
