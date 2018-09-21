@@ -104,7 +104,7 @@ class Solution {
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
-                           System.out.print("No file     ");
+                           System.out.print("NoFile          ");
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
