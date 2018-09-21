@@ -90,7 +90,7 @@ class Solution {
 		    			bags.addDic1(tokens);
                         }
                         catch(Exception e) {
-                           System.out.println("File not found");
+                           System.out.print("No file");
 
                         }
                         try {
