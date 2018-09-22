@@ -82,12 +82,12 @@ class StringMatching {
 	public void str1(String tokens) {
 		l1 = tokens;
 		len1 = tokens.length();
-		System.out.println(len1);
+		// System.out.println(len1);
 	}
 	public void str2(String tokens1) {
 		l2 = tokens1;
 		len2 = tokens1.length();
-		System.out.println(len2);
+		// System.out.println(len2);
 	}
 	 public void compare() {
 	 	double total = len1+len2;
@@ -116,7 +116,7 @@ class StringMatching {
         System.out.println(max);
         double res = (max*2)/total;
         double res1 = res*100;
-        System.out.println(res1);
+        System.out.print(res1+"		");
 	}
 }
 /**
@@ -193,7 +193,7 @@ class Solution {
 		    // System.out.println("Maximum similarity is between " + "File" + a + ".txt and File" + b + ".txt");
 
         } catch (NoSuchElementException e) {
-        	System.out.println("empty directory");
+        	System.out.println("Empty directory");
         }
     }
 
