@@ -184,6 +184,7 @@ class Solution {
 		    		    match.str2(line1);
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
+		    			match.compare();
                         }
                         catch (NoSuchElementException e) {
         	                System.out.println("Empty directory");
@@ -192,7 +193,7 @@ class Solution {
                         	System.out.println("File not found");
                         }
 
-                    match.compare();
+
 		    	}
 		    	System.out.println();
 		    }
