@@ -150,6 +150,7 @@ class Solution {
 		int b = 0;
 		// StringMatching match = new StringMatching();
         Scanner input = new Scanner(System.in);
+        try {
         	String x = input.nextLine();
         	File file = new File(x);
 			File[] files = file.listFiles();
@@ -172,7 +173,10 @@ class Solution {
 		    			String[] tokens = line.toLowerCase().split(" ");
 
                         } catch (NoSuchElementException e) {
-        	                System.out.println("Empty directory");
+        	                System.out.println("Empty Directory");
+                        }
+                        catch (NullPointerException e) {
+                        	System.out.println("File not found");
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
@@ -184,13 +188,19 @@ class Solution {
                         catch (NoSuchElementException e) {
         	                System.out.println("Empty directory");
                         }
+                        catch (NullPointerException e) {
+                        	System.out.println("File not found");
+                        }
 
                     match.compare();
 		    	}
 		    	System.out.println();
 		    }
 		    // System.out.println("Maximum similarity is between " + "File" + a + ".txt and File" + b + ".txt");
-
+            }
+            catch(NoSuchElementException e) {
+            	System.out.println("Empty Directory");
+            }
         }
     }
 
