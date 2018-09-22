@@ -172,7 +172,7 @@ class Solution {
 		    			match.str1(line);
 		    			String[] tokens = line.toLowerCase().split(" ");
 
-                        } catch (Exception e) {
+                        } catch (NullPointerException e) {
                            System.out.print("NoFile          ");
                         }
                         try {
@@ -182,7 +182,7 @@ class Solution {
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
 
-                        } catch (Exception e) {
+                        } catch (NullPointerException e) {
                         	System.out.print("NoFile");
                         }
 
