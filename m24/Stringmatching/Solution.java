@@ -113,7 +113,7 @@ class StringMatching {
         		}
         	}
         }
-        System.out.println(max);
+        // System.out.println(max);
         double res = (max*2)/total;
         double res1 = res*100;
         System.out.print(res1+"		");
