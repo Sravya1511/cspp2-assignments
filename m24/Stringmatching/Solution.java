@@ -89,7 +89,7 @@ class StringMatching {
 		len2 = tokens1.length();
 		// System.out.println(len2);
 	}
-	 public void compare() {
+	 public double compare() {
 	 	double total = len1+len2;
 	 	double max = 0;
         for(int i = 0; i<l1.length(); i++) {
@@ -116,7 +116,7 @@ class StringMatching {
         // System.out.println(max);
         double res = (max*2)/total;
         double res1 = res*100;
-        System.out.print(res1+"		");
+        return res1;
 	}
 }
 /**
@@ -184,7 +184,16 @@ class Solution {
 		    		    match.str2(line1);
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
-		    			match.compare();
+
+		    			double p = match.compare();
+		    			System.out.format("%.0f", p);
+		    			System.out.print("		");
+		    			if (p > max && i != j) {
+		    				 a = i + 1;
+		    				 b = j + 1;
+		    				 max = p;
+		    			    }
+
                         }
                         catch (NoSuchElementException e) {
         	                System.out.print("Empty directory    ");
