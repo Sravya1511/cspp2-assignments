@@ -186,7 +186,7 @@ class Solution {
 		    			line1.toLowerCase().split(" ");
 
 		    			double p = match.compare();
-		    			System.out.print("        ");
+		    			// System.out.print("        ");
 		    			System.out.format("%13.1f", p);
 
 		    			if (p > max && i != j) {
