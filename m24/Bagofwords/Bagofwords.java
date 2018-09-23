@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.*;
 import java.io.*;
 
+
 class BagOfWords {
 	Map<String, Integer> dictionary1 = new HashMap<String, Integer>();
 	Map<String, Integer> dictionary2 = new HashMap<String, Integer>();
@@ -20,6 +21,8 @@ class BagOfWords {
          	if(dictionary1.containsKey(i)) {
          		int k = dictionary1.get(i);
          		dictionary1.put(i, k+1);
+
+                System.out.print("      ");
          	}
          	else {
          		dictionary1.put(i, 1);
