@@ -22,7 +22,7 @@ final class Solution {
      *
      * @throws     IOException  { exception_description }
      */
-	/**
+    /**
 	 * Constructs the object.
 	 */
 	private Solution() {
