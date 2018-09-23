@@ -173,7 +173,7 @@ class Solution {
 		    			String[] tokens = line.toLowerCase().split(" ");
 
                         } catch (NoSuchElementException e) {
-        	                System.out.print("         0.0 ");
+        	                System.out.print("         0.0");
                         }
                         catch (NullPointerException e) {
                         	System.out.print("");
