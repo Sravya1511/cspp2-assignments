@@ -60,16 +60,15 @@ final class Solution {
                         // StringMatching match = new StringMatching();
                         try {
                         Scanner s = new Scanner(files[i]);
-		    			String line = s.useDelimiter("\\A").next();
-		    			String[] tokens = line.toLowerCase().split(" ");
+		String line = s.useDelimiter("\\A").next();
+		String[] tokens = line.toLowerCase().split(" ");
 		    			bags.addDic1(tokens);
                         } catch (Exception e) {
                            System.out.print("NoFile          ");
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
-		    			String line1 = s1.useDelimiter
-		    			("\\A").next();
+		String line1 = s1.useDelimiter("\\A").next();
 		    		    // match.str2(line1);
 		    			String[] tokens1 =
 		    			line1.toLowerCase().split(" ");
@@ -91,7 +90,8 @@ final class Solution {
 		    	}
 		    	System.out.println();
 		    }
-		    System.out.println("Maximum similarity is between " + "File" + a
+		    System.out.println("Maximum similarity is between "
+		    	+ "File" + a
 		    	+ ".txt and File" + b + ".txt");
 
         } catch (NoSuchElementException e) {
