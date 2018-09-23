@@ -78,7 +78,7 @@ String line1 = s1.useDelimiter("\\A").next();
                         if (bags.getDistance() != 0) {
                         double p = bags.getDistance();
                         System.out.format("%.0f", p);
-                        System.out.print("             ");
+                        System.out.print("               ");
                         if (p > max && i != j) {
                              a = i + 1;
 		    				 b = j + 1;
