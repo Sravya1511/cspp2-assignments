@@ -54,7 +54,7 @@ final class Solution {
 
             for (int i = 0; i < files.length; i++) {
                 int h = i + 1;
-                   System.out.print("File" + h + ".txt" + "	");
+                   System.out.print("File" + h + ".txt" + "       ");
                 for (int j = 0; j < files.length; j++) {
                         BagOfWords bags = new BagOfWords();
                         // StringMatching match = new StringMatching();
