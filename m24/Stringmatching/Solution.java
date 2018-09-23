@@ -116,7 +116,7 @@ class StringMatching {
         // System.out.println(max);
         double res = (max*2)/total;
         double res1 = res*100;
-        return res1;
+        return Math.round(res1);
 	}
 }
 /**
