@@ -64,7 +64,7 @@ String line = s.useDelimiter("\\A").next();
 String[] tokens = line.toLowerCase().split(" ");
                         bags.addDic1(tokens);
                         } catch (Exception e) {
-                           System.out.print("NoFile            ");
+                           System.out.print("NoFile           ");
                         }
                         try {
                             Scanner s1 = new Scanner(files[j]);
@@ -81,20 +81,20 @@ String line1 = s1.useDelimiter("\\A").next();
                         System.out.print("               ");
                         if (p > max && i != j) {
                              a = i + 1;
-		    				 b = j + 1;
-		    				 max = p;
-		    			    }
+                             b = j + 1;
+                             max = p;
+                            }
                         }
                     // match.compare();
-		    	}
-		    	System.out.println();
-		    }
-		    System.out.println("Maximum similarity is between "
-		    	+ "File" + a
-		    	+ ".txt and File" + b + ".txt");
+                }
+                System.out.println();
+            }
+            System.out.println("Maximum similarity is between "
+                + "File" + a
+                + ".txt and File" + b + ".txt");
 
         } catch (NoSuchElementException e) {
-        	System.out.println("empty directory");
+            System.out.println("empty directory");
         }
     }
 
