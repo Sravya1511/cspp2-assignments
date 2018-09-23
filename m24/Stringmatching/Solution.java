@@ -156,13 +156,13 @@ class Solution {
 			File[] files = file.listFiles();
 			System.out.print("      		");
 			for (int i = 1; i <= files.length; i++) {
-				System.out.print("File" + i + ".txt" + "	");
+				System.out.print("file" + i + ".txt" + "	");
 			}
 			System.out.println();
 
 		    for (int i = 0; i < files.length; i++) {
 		    	int h = i + 1;
-                   System.out.print("File" + h + ".txt" + "	");
+                   System.out.print("file" + h + ".txt" + "	");
 		    	for (int j = 0; j < files.length; j++) {
 
                         StringMatching match = new StringMatching();
@@ -173,7 +173,7 @@ class Solution {
 		    			String[] tokens = line.toLowerCase().split(" ");
 
                         } catch (NoSuchElementException e) {
-        	                System.out.print("NoFile    ");
+        	                System.out.print("NoFile          ");
                         }
                         catch (NullPointerException e) {
                         	System.out.print("");
@@ -196,7 +196,7 @@ class Solution {
 
                         }
                         catch (NoSuchElementException e) {
-        	                System.out.print("NoFile    ");
+        	                System.out.print("NoFile");
                         }
                         catch (NullPointerException e) {
                         	System.out.print("");
@@ -206,7 +206,7 @@ class Solution {
 		    	}
 		    	System.out.println();
 		    }
-		    System.out.println("Maximum similarity is between " + "File" + a + ".txt and File" + b + ".txt");
+		    System.out.println("Maximum similarity is between " + "file" + a + ".txt and file" + b + ".txt");
             }
             catch(NoSuchElementException e) {
             	System.out.println("Empty Directory");
