@@ -154,9 +154,9 @@ class Solution {
         	String x = input.nextLine();
         	File file = new File(x);
 			File[] files = file.listFiles();
-			System.out.print("      		");
+			System.out.print("             ");
 			for (int i = 1; i <= files.length; i++) {
-				System.out.print("file" + i + ".txt" + "	");
+				System.out.print("file" + i + ".txt" + "    ");
 			}
 			System.out.println();
 
