@@ -1,12 +1,13 @@
-import java.io.BufferedReader;
+// import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+// import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.*;
-import java.io.*;
+// import java.util.HashMap;
+// import java.util.Hashtable;
+// import java.util.Map;
+import java.util.Scanner;
+import java.util.NoSuchElementException;
+// import java.io.*;
 
 
 /**
@@ -24,7 +25,7 @@ class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	private Solution() {
 
 	}
 	/**
