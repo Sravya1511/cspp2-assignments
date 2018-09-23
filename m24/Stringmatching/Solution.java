@@ -162,7 +162,7 @@ class Solution {
 
 		    for (int i = 0; i < files.length; i++) {
 		    	int h = i + 1;
-                   System.out.print("file" + h + ".txt" + "	");
+                   System.out.print("file" + h + ".txt");
 		    	for (int j = 0; j < files.length; j++) {
 
                         StringMatching match = new StringMatching();
@@ -186,8 +186,9 @@ class Solution {
 		    			line1.toLowerCase().split(" ");
 
 		    			double p = match.compare();
+		    			System.out.print("        ");
 		    			System.out.format("%.1f", p);
-		    			System.out.print("		");
+
 		    			if (p > max && i != j) {
 		    				 a = i + 1;
 		    				 b = j + 1;
