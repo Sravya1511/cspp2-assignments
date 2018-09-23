@@ -49,39 +49,38 @@ final class Solution {
             for (int i = 1; i <= files.length; i++) {
             System.out.print("File" + i + ".txt"
             + "       ");
-			}
-			System.out.println();
+            }
+            System.out.println();
 
-		    for (int i = 0; i < files.length; i++) {
-		    	int h = i + 1;
+            for (int i = 0; i < files.length; i++) {
+                int h = i + 1;
                    System.out.print("File" + h + ".txt" + "	");
-		    	for (int j = 0; j < files.length; j++) {
+                for (int j = 0; j < files.length; j++) {
                         BagOfWords bags = new BagOfWords();
                         // StringMatching match = new StringMatching();
                         try {
                         Scanner s = new Scanner(files[i]);
-		String line = s.useDelimiter("\\A").next();
-		String[] tokens = line.toLowerCase().split(" ");
-		    			bags.addDic1(tokens);
+String line = s.useDelimiter("\\A").next();
+String[] tokens = line.toLowerCase().split(" ");
+                        bags.addDic1(tokens);
                         } catch (Exception e) {
                            System.out.print("NoFile          ");
                         }
                         try {
-                        	Scanner s1 = new Scanner(files[j]);
-		String line1 = s1.useDelimiter("\\A").next();
-		    		    // match.str2(line1);
-		    			String[] tokens1 =
-		    			line1.toLowerCase().split(" ");
-		    			bags.addDic2(tokens1);
+                            Scanner s1 = new Scanner(files[j]);
+String line1 = s1.useDelimiter("\\A").next();
+                        String[] tokens1 =
+                        line1.toLowerCase().split(" ");
+                        bags.addDic2(tokens1);
                         } catch (Exception e) {
-                        	System.out.print("NoFile");
+                            System.out.print("NoFile");
                         }
                         if (bags.getDistance() != 0) {
                         double p = bags.getDistance();
-		    			System.out.format("%.0f", p);
-		    			System.out.print("		");
-		    			if (p > max && i != j) {
-		    				 a = i + 1;
+                        System.out.format("%.0f", p);
+                        System.out.print("		");
+                        if (p > max && i != j) {
+                             a = i + 1;
 		    				 b = j + 1;
 		    				 max = p;
 		    			    }
