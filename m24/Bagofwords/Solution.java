@@ -48,7 +48,7 @@ final class Solution {
             System.out.print("                ");
             for (int i = 1; i <= files.length; i++) {
             System.out.print("File" + i + ".txt"
-            + "        ");
+            + "       ");
 			}
 			System.out.println();
 
@@ -79,7 +79,7 @@ final class Solution {
                         if (bags.getDistance() != 0) {
                         double p = bags.getDistance();
 		    			System.out.format("%.0f", p);
-		    			System.out.print("            ");
+		    			System.out.print("		");
 		    			if (p > max && i != j) {
 		    				 a = i + 1;
 		    				 b = j + 1;
