@@ -173,7 +173,7 @@ class Solution {
 		    			String[] tokens = line.toLowerCase().split(" ");
 
                         } catch (NoSuchElementException e) {
-        	                System.out.print("        NoFile");
+        	                System.out.print("        0.0");
                         }
                         catch (NullPointerException e) {
                         	System.out.print("");
@@ -197,7 +197,7 @@ class Solution {
 
                         }
                         catch (NoSuchElementException e) {
-        	                System.out.print("        NoFile");
+        	                System.out.print("        0.0");
                         }
                         catch (NullPointerException e) {
                         	System.out.print("");
