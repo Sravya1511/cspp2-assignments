@@ -173,10 +173,10 @@ class Solution {
 		    			String[] tokens = line.toLowerCase().split(" ");
 
                         } catch (NoSuchElementException e) {
-        	                System.out.println("Empty Directory");
+        	                System.out.print("Empty Directory    ");
                         }
                         catch (NullPointerException e) {
-                        	System.out.println("File not found");
+                        	System.out.print("");
                         }
                         try {
                         	Scanner s1 = new Scanner(files[j]);
@@ -187,10 +187,10 @@ class Solution {
 		    			match.compare();
                         }
                         catch (NoSuchElementException e) {
-        	                System.out.println("Empty directory");
+        	                System.out.print("Empty directory    ");
                         }
                         catch (NullPointerException e) {
-                        	System.out.println("File not found");
+                        	System.out.print("");
                         }
 
 
