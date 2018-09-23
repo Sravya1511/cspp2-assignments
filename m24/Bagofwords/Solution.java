@@ -23,29 +23,29 @@ final class Solution {
      * @throws     IOException  { exception_description }
      */
     /**
-	 * Constructs the object.
-	 */
-	private Solution() {
+     * Constructs the object.
+     */
+    private Solution() {
 
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      args         The arguments
-	 *
-	 * @throws     IOException  { exception_description }
-	 */
-	public static void main(final String[] args) throws IOException {
-		double max = 0;
-		int a = 0;
-		int b = 0;
-		StringMatching match = new StringMatching();
-        Scanner input = new Scanner(System.in);
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      args         The arguments
+     *
+     * @throws     IOException  { exception_description }
+    */
+    public static void main(final String[] args) throws IOException {
+        double max = 0;
+    int a = 0;
+    int b = 0;
+    StringMatching match = new StringMatching();
+    Scanner input = new Scanner(System.in);
         try {
-        	String x = input.nextLine();
-        	File file = new File(x);
-			File[] files = file.listFiles();
-			System.out.print("      		");
+            String x = input.nextLine();
+            File file = new File(x);
+		    File[] files = file.listFiles();
+            System.out.print("      		");
 			for (int i = 1; i <= files.length; i++) {
 				System.out.print("File" + i + ".txt"
 					+ "	");
