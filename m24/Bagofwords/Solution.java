@@ -44,7 +44,7 @@ final class Solution {
         try {
             String x = input.nextLine();
             File file = new File(x);
-		    File[] files = file.listFiles();
+            File[] files = file.listFiles();
             System.out.print("      		");
 			for (int i = 1; i <= files.length; i++) {
 				System.out.print("File" + i + ".txt"
