@@ -187,7 +187,7 @@ class Solution {
 
 		    			double p = match.compare();
 		    			System.out.print("        ");
-		    			System.out.format("%.1f", p);
+		    			System.out.format("%13.1f", p);
 
 		    			if (p > max && i != j) {
 		    				 a = i + 1;
